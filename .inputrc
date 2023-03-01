@@ -1,0 +1,29 @@
+
+# https://wiki.archlinux.org/title/Readline
+
+# pretty stuff 
+set show-all-if-ambiguous on
+set colored-stats on
+
+# hides ^c when pressing it in terminal
+set echo-control-characters off 
+
+# auto complete settings
+set colored-completion-prefix on
+set completion-ignore-case on
+
+# input / keybindings 
+
+# \e means alt
+# \C- means ctrl
+
+# makes ctrl+backspace and ctrl+delete delete stuff
+# https://unix.stackexchange.com/a/264871
+"\C-h": backward-kill-word
+
+# alt+s appends "sudo " to the front of line
+"\es": "\C-asudo \C-e"
+
+# lets up/down arrow search based on typed context
+"\e[A": history-search-backward
+"\e[B": history-search-forward
