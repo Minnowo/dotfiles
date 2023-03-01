@@ -1,0 +1,67 @@
+# see https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
+
+draw_bold_text_with_bright_colors: false
+
+ve_config_reload: true
+
+
+
+window:
+   opacity: 1.0 
+
+
+
+cursor:
+   style: Block 
+
+
+
+font:
+   normal:
+      family: "Hack"
+      style: Regular
+   bold:
+      family: "Hack"
+      style: Bold
+   italic:
+      family: "Hack"
+      style: Italic
+   bold_italic:
+      family: "Hack"
+      style: Bold Italic
+
+   size: 12.0
+
+
+
+hints:
+  enabled:
+   - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+     command: firefox
+     post_processing: true
+     
+     mouse:
+       enabled: true
+       mods: Control
+
+
+
+key_bindings:
+   - { key: F,        mods: Control,       action: ToggleFullscreen             }  
+   - { key: V,        mods: Control|Shift, action: Paste                        }
+   - { key: C,        mods: Control|Shift, action: Copy                         }
+  
+
+
+import:
+    - ~/.config/alacritty/themes/themes/rose-pine.yaml 
+    #  - ~/.config/alacritty/themes/themes/monokai_charcoal.yaml 
+
+    # bad themes 
+    # - ~/.config/alacritty/themes/themes/cyber_punk_neon.yaml 
+    # - ~/.config/alacritty/themes/themes/dracula.yaml 
+    # - ~/.config/alacritty/themes/themes/hyper.yaml 
+    # - ~/.config/alacritty/themes/themes/cyber_punk_neon.yaml 
+    # - ~/.config/alacritty/themes/themes/cyber_punk_neon.yaml 
+    # - ~/.config/alacritty/themes/themes/cyber_punk_neon.yaml 
+    # - ~/.config/alacritty/themes/themes/cyber_punk_neon.yaml 
