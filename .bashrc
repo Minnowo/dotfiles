@@ -16,6 +16,11 @@ alias sudoedit='doasa rnano'
 
 alias gpu="nvidia-smi -l 1"
 
+alias mpvc="mpv \"\$(ls | dmenu)\""
+alias jviewc="jview \"\$(ls | dmenu)\""
+
+export IM4JAVA_TOOLPATH="/bin/"
+
 export LS_COLORS="rs=0:"
 export LS_COLORS="${LS_COLORS}di=01;34:"
 export LS_COLORS="${LS_COLORS}ln=01;36:"
