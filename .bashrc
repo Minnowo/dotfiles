@@ -21,6 +21,8 @@ alias jviewc="jview \"\$(ls | dmenu)\""
 
 export IM4JAVA_TOOLPATH="/bin/"
 
+export GTK_USE_PORTAL=1
+
 export LS_COLORS="rs=0:"
 export LS_COLORS="${LS_COLORS}di=01;34:"
 export LS_COLORS="${LS_COLORS}ln=01;36:"

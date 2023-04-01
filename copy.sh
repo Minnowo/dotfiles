@@ -23,7 +23,12 @@ rsync -aivr --delete --progress \
 rsync -aivr --delete --progress \
    ~/.config/kritashortcutsrc ./.config/
 
+rsync -aivr --delete --progress \
+   ~/.config/i3 ./.config/
 
+rsync -aivr --delete --progress \
+   --exclude "forest" \
+   ~/.config/polybar ./.config/
 
 yes | cp -rf ~/.bashrc ./.bashrc 
 yes | cp -rf ~/.inputrc ./.inputrc 
