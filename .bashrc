@@ -23,6 +23,12 @@ export IM4JAVA_TOOLPATH="/bin/"
 
 export GTK_USE_PORTAL=1
 
+alias update="doas pacman -Syu"
+
+function install() { update && doas pacman -S "$1"; }
+# function uninstall() { doas pacman -R "$1" && doas pacman -Rsn $(pacman -Qdtq) }
+
+
 export LS_COLORS="rs=0:"
 export LS_COLORS="${LS_COLORS}di=01;34:"
 export LS_COLORS="${LS_COLORS}ln=01;36:"

@@ -5,6 +5,8 @@ set mouse=
 set ttymouse=
 set scrolloff=9999
 
+" autocmd VimLeave * call system("xsel -ib", getreg('+'))
+autocmd VimLeave * call system('echo ' . shellescape(getreg('+')) . ' | xclip -selection clipboard')
 
 hi Search ctermbg='Yellow'
 hi Search ctermfg='Black'

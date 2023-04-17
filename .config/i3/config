@@ -52,8 +52,8 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym --release $alt+z exec flameshot gui
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym --release $alt+z exec --no-startup-id flameshot gui
 
 # kill focused window
 bindsym $mod+q kill
@@ -83,10 +83,11 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
+bindsym $mod+Shift+t sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -94,7 +95,6 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-bindsym Control+$alt+l "exec i3lock -c 000000"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -136,8 +136,11 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws0
 bindsym $mod+Shift+p move container to workspace number $ws10
 
+bindsym $mod+Control+l move workspace to output right
+bindsym $mod+Control+h move workspace to output left
+
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c reload; exec --no-startup-id notify-send -t 1500 "i3 Config Reloaded"
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -160,32 +163,54 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         # status_command i3status --config ~/.config/i3/i3status.conf
-#         # status_command i3status --config ~/.config/i3/i3status.conf
-#         status_command  
-#         position top
-#         output primary
-#         tray_output primary
-# 	separator_symbol "<200b>"
-# }
+#set $i3lockwall sh ~/.config/i3/lock.sh
+#
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
+#
+#mode "$mode_system" {
+#    bindsym l exec --no-startup-id $i3lockwall, mode "default"
+#    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+#    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
+#    bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
+#    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+#    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
+#
+#    # back to normal: Enter or Escape
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+#
+# bindsym $mod+BackSpace mode "$mode_system"
+
+bindsym Control+$alt+l "exec i3lock -c 000000"
 
 
+# notification service
+exec_always --no-startup-id dunst
+
+# bar service
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh 
 
 # set key repeat faster
-exec xset r rate 300 32
+exec_always --no-startup-id xset r rate 300 32 && notify-send -t 1500 "Key Repeat Set"
 
 # disable mouse accel for all pointers 
-exec for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1; done
-
-# notification service
-exec_always dunst
+exec_always --no-startup-id for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1 && notify-send -t 1500 "Mouse accleration off for pointer: ${id}"; done
 
 # wallpaper
-exec_always nitrogen --restore
+exec_always --no-startup-id "nitrogen --restore"
+
+
+
+
+
+
+
+
+
+
+
+for_window [title="review files to import*"] floating enable
 
 
 
