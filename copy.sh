@@ -30,6 +30,10 @@ rsync -aivr --delete --progress \
    --exclude "forest" \
    ~/.config/polybar ./.config/
 
+
+rsync -aivr --delete --progress \
+   ~/.config/neofetch ./.config/
+
 yes | cp -rf ~/.bashrc ./.bashrc 
 yes | cp -rf ~/.inputrc ./.inputrc 
 yes | cp -rf ~/.vimrc ./.vimrc 
