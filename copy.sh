@@ -37,3 +37,5 @@ rsync -aivr --delete --progress \
 yes | cp -rf ~/.bashrc ./.bashrc 
 yes | cp -rf ~/.inputrc ./.inputrc 
 yes | cp -rf ~/.vimrc ./.vimrc 
+yes | cp -rf ~/.xprofile ./.xprofile 
+yes | cp -rf ~/.xinitrc ./.xinitrc 
