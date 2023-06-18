@@ -34,8 +34,11 @@ rsync -aivr --delete --progress \
 rsync -aivr --delete --progress \
    ~/.config/neofetch ./.config/
 
-yes | cp -rf ~/.bashrc ./.bashrc 
-yes | cp -rf ~/.inputrc ./.inputrc 
-yes | cp -rf ~/.vimrc ./.vimrc 
-yes | cp -rf ~/.xprofile ./.xprofile 
-yes | cp -rf ~/.xinitrc ./.xinitrc 
+rsync -aivr --delete --progress \
+   ~/.config/lf ./.config/
+
+yes | cp -rf ~/.bashrc ./.bashrc || true
+yes | cp -rf ~/.inputrc ./.inputrc || true
+yes | cp -rf ~/.vimrc ./.vimrc  || true
+yes | cp -rf ~/.xprofile ./.xprofile  || true
+yes | cp -rf ~/.xinitrc ./.xinitrc  || true

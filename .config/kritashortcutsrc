@@ -1,12 +1,16 @@
 [Shortcuts]
 KisToolSelectOutline=V
 KritaFill/KisToolFill=none
+KritaFill/KisToolGradient=none
 KritaShape/KisToolBrush=F
 KritaShape/KisToolMultiBrush=none
 activate_preset_0=R
+activate_preset_1=1
+activate_preset_2=2
 deselect=Ctrl+D
 edit_redo=X
 edit_undo=Z
+krita_filter_invert=G
 mirrorImageHorizontal=M
 mirror_canvas=A
 pathsegment-line=none

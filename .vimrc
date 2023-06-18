@@ -1,12 +1,66 @@
 set number
-syntax on
 set hlsearch
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Disable mouse clicking
 set mouse=
 set ttymouse=
+
+" Center cursor when moving vertically using j/k
 set scrolloff=9999
 
-" autocmd VimLeave * call system("xsel -ib", getreg('+'))
-autocmd VimLeave * call system('echo ' . shellescape(getreg('+')) . ' | xclip -selection clipboard')
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=1
+
+" A buffer becomes hidden when it is abandoned
+set hid
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Turn on highlighting
+syntax enable
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
 
 hi Search ctermbg='Yellow'
 hi Search ctermfg='Black'

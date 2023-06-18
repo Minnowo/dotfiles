@@ -59,8 +59,12 @@ bindsym --release $alt+z exec --no-startup-id flameshot gui
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun \
+                             -config ~/.config/rofi/rofidmenu.rasi
+
+bindsym $alt+Tab exec --no-startup-id rofi -show window \
+                             -config ~/.config/rofi/rofidmenu.rasi
 
 # change focus
 bindsym $mod+h focus left
@@ -141,10 +145,13 @@ bindsym $mod+Control+h move workspace to output left
 
 # reload the configuration file
 bindsym $mod+Shift+c reload; exec --no-startup-id notify-send -t 1500 "i3 Config Reloaded"
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -163,25 +170,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-#set $i3lockwall sh ~/.config/i3/lock.sh
-#
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
-#
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id $i3lockwall, mode "default"
-#    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-#    bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
-#    bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
-#    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-#    bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
-#
-#    # back to normal: Enter or Escape
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-#
-# bindsym $mod+BackSpace mode "$mode_system"
-
 bindsym Control+$alt+l "exec i3lock -c 000000"
 
 
@@ -198,9 +186,9 @@ exec_always --no-startup-id xset r rate 300 32 && notify-send -t 1500 "Key Repea
 exec_always --no-startup-id for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1 && notify-send -t 1500 "Mouse accleration off for pointer: ${id}"; done
 
 # wallpaper
-exec_always --no-startup-id "nitrogen --restore"
+#exec_always --no-startup-id "nitrogen --restore"
 
-
+exec_always --no-startup-id sleep 1 && feh --bg-fill --randomize "$HOME/Pictures/Background/"  
 
 
 

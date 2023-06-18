@@ -14,6 +14,8 @@ alias cat='bat'
 alias sudo="doas"
 alias sudoedit='doasa rnano'
 
+alias unmount-network='doas umount -t cifs,nfs -a -l'
+
 alias gpu="nvidia-smi -l 1"
 
 alias mpvc="mpv \"\$(ls | dmenu)\""
@@ -22,6 +24,8 @@ alias jviewc="jview \"\$(ls | dmenu)\""
 export IM4JAVA_TOOLPATH="/bin/"
 
 export GTK_USE_PORTAL=1
+
+export VISUAL=vim
 
 alias update="doas pacman -Syu"
 
@@ -60,6 +64,20 @@ export LS_COLORS="${LS_COLORS}*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+lfcd () {
+    tmp="$(mktemp)"
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    command lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
 
 
 neofetch
@@ -74,9 +92,10 @@ else
     if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
         . "/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/miniconda3/bin:$PATH"
+        export PATH="$PATH:/opt/miniconda3/bin"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+. "$HOME/.cargo/env"
