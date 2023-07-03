@@ -10,6 +10,7 @@ export PATH="~/.local/bin:$PATH"
 alias ls='lsd'
 
 alias cat='bat'
+alias vim='nvim'
 
 alias sudo="doas"
 alias sudoedit='doasa rnano'
@@ -25,7 +26,7 @@ export IM4JAVA_TOOLPATH="/bin/"
 
 export GTK_USE_PORTAL=1
 
-export VISUAL=vim
+export VISUAL=nvim
 
 alias update="doas pacman -Syu"
 

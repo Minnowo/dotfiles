@@ -23,7 +23,7 @@ set ratio 0:3:3
 
 
 
-
+map e $nvim "$f"
 
 # period to toggle showing hidden files
 map . set hidden!
