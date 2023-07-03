@@ -52,7 +52,8 @@ vim.o.termguicolors = true
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- for ctrl+backspace to delete word
-vim.keymap.set("i", "<C-BS>", "<C-w>")
+vim.keymap.set("i", "<C-h>", "<C-w>") -- works in alacritty
+vim.keymap.set("i", "<C-BS>", "<C-w>") -- works in kitty
 -- for ctrl+del to delete word
 vim.keymap.set("i", "<C-Del>", "<C-o>dw")
 vim.keymap.set("v", "<tab>", "<C-o>dw")
