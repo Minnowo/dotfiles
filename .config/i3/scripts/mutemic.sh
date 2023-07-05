@@ -22,7 +22,7 @@ done
 
 
 
-if [[ $(cat /var/tmp/mic_mute) -eq 0 ]]; then                                                               
+if [[ $(head -n 1 /var/tmp/mic_mute) -eq 0 ]]; then                                                               
     # use `pactl list sources` to find the numbers 145 and 144
     # this is my headset
     pactl set-source-mute 145 1

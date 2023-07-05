@@ -12,30 +12,21 @@
 set $mod Mod4
 set $alt Mod1
 
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# hide titlebars 
+default_border pixel 1
+
+# hide borders except when needed
+hide_edge_borders smart 
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:System San Francisco Display 13
 # font pango:monospace 13
 font pango:Hack 13
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex --autostart --environment i3
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -44,17 +35,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# mic toggle
 bindsym $mod+m exec --no-startup-id ~/.config/i3/scripts/mutemic.sh
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-# tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
+
+# screenshot program
 bindsym --release $alt+z exec --no-startup-id flameshot gui
 
 # kill focused window
@@ -67,6 +55,13 @@ bindsym $mod+d exec --no-startup-id rofi -show drun \
 
 bindsym $alt+Tab exec --no-startup-id rofi -show window \
                              -config ~/.config/rofi/rofidmenu.rasi
+
+
+bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+
+bindsym Control+$alt+l exec ~/.config/i3/scripts/blur-lock
+
+
 
 # change focus
 bindsym $mod+h focus left
@@ -93,13 +88,15 @@ bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+space focus mode_toggle
+
+# always on top
 bindsym $mod+Shift+t sticky toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
+# reload the configuration file
+bindsym $mod+Shift+c reload; exec --no-startup-id notify-send -t 1500 "i3 Config Reloaded"
 
-# focus the child container
-#bindsym $mod+d focus child
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
 
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -145,23 +142,16 @@ bindsym $mod+Shift+p move container to workspace number $ws10
 bindsym $mod+Control+l move workspace to output right
 bindsym $mod+Control+h move workspace to output left
 
-# reload the configuration file
-bindsym $mod+Shift+c reload; exec --no-startup-id notify-send -t 1500 "i3 Config Reloaded"
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+bindsym $mod+r mode "resize"
 
-# resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 20 px or 10 ppt
+        bindsym j resize grow height 20 px or 10 ppt
+        bindsym k resize shrink height 20 px or 10 ppt
+        bindsym l resize grow width 20 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -169,14 +159,29 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
 
 
-bindsym Control+$alt+l "exec i3lock -c 000000"
 
+
+################################################################
+#                 Auto Start Applications 
+################################################################
+
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
 
 # notification service
-exec_always --no-startup-id dunst
+exec --no-startup-id dunst
 
 # bar service
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh 
@@ -188,19 +193,39 @@ exec_always --no-startup-id xset r rate 300 32 && notify-send -t 1500 "Key Repea
 exec_always --no-startup-id for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1 && notify-send -t 1500 "Mouse accleration off for pointer: ${id}"; done
 
 # wallpaper
-#exec_always --no-startup-id "nitrogen --restore"
-
 exec_always --no-startup-id sleep 1 && feh --bg-fill --randomize "$HOME/Pictures/Background/"  
 
 
 
 
-
-
-
+################################################################
+#                 Window Stuff 
+################################################################
 
 
 for_window [title="review files to import*"] floating enable
+
+
+################################################################
+#                 Colors  
+################################################################
+
+
+# default colors
+# class                 border  backgr. text    indicator child_border
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #2f343a #900000 #ffffff #900000   #900000
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+# client.background       #ffffff
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #e0def4 #e0def4 #e0def4 #e0def4   #e0def4
+
+
+
 
 
 
