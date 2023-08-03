@@ -17,6 +17,7 @@ floating_modifier $mod
 
 # hide titlebars 
 default_border pixel 1
+default_floating_border pixel 1
 
 # hide borders except when needed
 hide_edge_borders smart 
@@ -222,7 +223,7 @@ for_window [title="review files to import*"] floating enable
 # client.background       #ffffff
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #e0def4 #e0def4 #e0def4 #e0def4   #e0def4
+client.focused          #e0def4 #e0def4 #26233a #e0def4   #e0def4
 
 
 

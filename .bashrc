@@ -16,6 +16,8 @@ alias sudo="doas"
 alias sudoedit='doasa rnano'
 
 alias unmount-network='doas umount -t cifs,nfs -a -l'
+alias mount-network='doas mount -t cifs,nfs -a'
+alias find-local='nmap -n -sn 192.168.1.1/24'
 
 alias gpu="nvidia-smi -l 1"
 
@@ -31,7 +33,8 @@ export VISUAL=nvim
 alias update="doas pacman -Syu"
 
 function install() { update && doas pacman -S "$1"; }
-# function uninstall() { doas pacman -R "$1" && doas pacman -Rsn $(pacman -Qdtq) }
+function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq); }
+function uninstall() { doas pacman -R "$1" && remove_orphans; }
 
 
 export LS_COLORS="rs=0:"
