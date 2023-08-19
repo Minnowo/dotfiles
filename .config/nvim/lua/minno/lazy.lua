@@ -30,6 +30,9 @@ require('lazy').setup({
   -- vscode theme
   'Mofiqul/vscode.nvim',
 
+  -- close brackets and stuff
+  'minnowo/autoclose.nvim',
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 

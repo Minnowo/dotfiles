@@ -70,11 +70,12 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
+set $move_amt 50px
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left  $move_amt
+bindsym $mod+Shift+j move down  $move_amt
+bindsym $mod+Shift+k move up    $move_amt
+bindsym $mod+Shift+l move right $move_amt
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle

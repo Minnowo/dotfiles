@@ -5,38 +5,81 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
+## Use the up and down arrow keys for finding a command in history
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+# PATH
 export PATH="~/.local/bin:$PATH"
+export GTK_USE_PORTAL=1
+export VISUAL=nvim
+export IM4JAVA_TOOLPATH="/bin/"
 
-alias ls='lsd'
+# HELPER FUNCTIONS
+function _cmd_exist() { type "$1" > /dev/null; }
 
-alias cat='bat'
-alias vim='nvim'
 
-alias sudo="doas"
-alias sudoedit='doasa rnano'
+# ALIAS & COMMANDS
+if _cmd_exist 'lsd'; then
+    alias ls='lsd'
+fi
 
-alias unmount-network='doas umount -t cifs,nfs -a -l'
-alias mount-network='doas mount -t cifs,nfs -a'
+if _cmd_exist 'bat'; then
+    alias cat='bat'
+fi
+
+if _cmd_exist 'nvim'; then
+    alias vim='nvim'
+fi
+
+if _cmd_exist 'doas'; then
+    alias sudo='doas'
+    alias sudoedit='doasa rnano'
+fi
+
+alias unmount-network='umount -t cifs,nfs -a -l'
+alias mount-network='mount -t cifs,nfs -a'
+
 alias find-local='nmap -n -sn 192.168.1.1/24'
 
 alias gpu="nvidia-smi -l 1"
 
-alias mpvc="mpv \"\$(ls | dmenu)\""
-alias jviewc="jview \"\$(ls | dmenu)\""
+alias update="sudo pacman -Syu"
 
-export IM4JAVA_TOOLPATH="/bin/"
+function install()        { update && sudo pacman -S "$1";         }
+function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq);      }
+function uninstall()      { doas pacman -R "$1" && remove_orphans; }
 
-export GTK_USE_PORTAL=1
+function ffmpeg_hash() 
+{ 
+    for value in "$@"; do 
 
-export VISUAL=nvim
+        if [ -f "$value" ]; then
 
-alias update="doas pacman -Syu"
+            ffmpeg -loglevel error -i "$value" -map 0 -f hash -;
 
-function install() { update && doas pacman -S "$1"; }
-function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq); }
-function uninstall() { doas pacman -R "$1" && remove_orphans; }
+        fi
 
+    done
+}
 
+function lfcd () {
+    tmp="$(mktemp)"
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    command lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
+
+# PATH FOR COLORS
 export LS_COLORS="rs=0:"
 export LS_COLORS="${LS_COLORS}di=01;34:"
 export LS_COLORS="${LS_COLORS}ln=01;36:"
@@ -62,26 +105,6 @@ export LS_COLORS="${LS_COLORS}*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*
 [[ "$(whoami)" = "root" ]] && return
 
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
-
-## Use the up and down arrow keys for finding a command in history
-## (you can write some initial letters of the command first).
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
-
-lfcd () {
-    tmp="$(mktemp)"
-    # `command` is needed in case `lfcd` is aliased to `lf`
-    command lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
-        fi
-    fi
-}
 
 
 neofetch
