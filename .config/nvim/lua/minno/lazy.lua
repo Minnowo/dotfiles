@@ -25,8 +25,6 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
-  'RaafatTurki/hex.nvim',
-
   -- vscode theme
   'Mofiqul/vscode.nvim',
 

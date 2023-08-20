@@ -39,6 +39,14 @@ rsync -aivr --delete --progress \
 rsync -aivr --delete --progress \
    ~/.config/nvim ./.config/
 
+rsync -aivr --delete --progress \
+   --exclude "command-history" \
+   --exclude "search-history" \
+   --exclude "cache" \
+   --exclude "lib.pl" \
+   --exclude "playlists" \
+   ~/.config/cmus ./.config/
+
 yes | cp -rf ~/.bashrc ./.bashrc || true
 yes | cp -rf ~/.inputrc ./.inputrc || true
 yes | cp -rf ~/.vimrc ./.vimrc  || true
