@@ -1,4 +1,9 @@
 require("minno.remap")
 require("minno.set")
-require("minno.lazy")
+if vim.g.vscode then
+    -- VSCode extension
+else
+    -- ordinary Neovim
+  require("minno.lazy")
+end
 

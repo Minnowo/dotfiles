@@ -21,9 +21,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
 
-  -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
 
   -- vscode theme
   'Mofiqul/vscode.nvim',
@@ -33,9 +30,6 @@ require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-
-  -- Undo tree 
-  'mbbill/undotree',
 
   -- File swapping 
   'theprimeagen/harpoon',
@@ -98,9 +92,6 @@ require('lazy').setup({
     'rose-pine/neovim',
     as = 'rose-pine',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'rose-pine'
-    end,
   },
 
   {
@@ -121,7 +112,6 @@ require('lazy').setup({
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
     opts = {
       char = '┊',
       show_trailing_blankline_indent = false,
