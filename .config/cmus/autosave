@@ -97,7 +97,7 @@ set pl_env_vars=
 set pl_sort=
 set play_library=true
 set play_sorted=false
-set repeat=false
+set repeat=true
 set repeat_current=false
 set replaygain=disabled
 set replaygain_limit=true
@@ -111,7 +111,7 @@ set show_current_bitrate=false
 set show_hidden=false
 set show_playback_position=true
 set show_remaining_time=false
-set shuffle=off
+set shuffle=tracks
 set skip_track_info=false
 set smart_artist_sort=true
 set softvol=false
@@ -129,9 +129,9 @@ bind browser i toggle show_hidden
 bind browser space win-activate
 bind browser u win-update
 bind common ! push shell 
-bind common + vol +10%
+bind common + vol +5%
 bind common , seek -1m
-bind common - vol -10%
+bind common - vol -5%
 bind common . seek +1m
 bind common / search-start
 bind common 1 view tree
@@ -141,7 +141,7 @@ bind common 4 view queue
 bind common 5 view browser
 bind common 6 view filters
 bind common 7 view settings
-bind common = vol +10%
+bind common = vol +5%
 bind common ? search-b-start
 bind common B player-next-album
 bind common C toggle continue

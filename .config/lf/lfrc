@@ -54,7 +54,7 @@ map gD cd ~/Downloads
 
 
 # define a custom 'rename' command without prompt for overwrite
-cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+cmd rename %[ -e "$1" ] && printf "file exists" || mv "$f" "$1"
 
 # define a custom 'open' command that does nothing
 # this makes it so that using the vim key to go right on a file doesn't open it

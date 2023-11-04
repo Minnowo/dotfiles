@@ -16,8 +16,13 @@ export GTK_USE_PORTAL=1
 export VISUAL=nvim
 export IM4JAVA_TOOLPATH="/bin/"
 
+if [ -d "/mnt/SSData/AndroidSDK" ]; then 
+    export ANDROID_SDK_HOME=/mnt/SSData/AndroidSDK
+    export PATH="$PATH:/mnt/SSData/AndroidSDK/flutter/flutter/bin"
+fi
+
 # HELPER FUNCTIONS
-function _cmd_exist() { type "$1" > /dev/null; }
+function _cmd_exist() { type "$1" > /dev/null 2>&1; }
 
 
 # ALIAS & COMMANDS
@@ -31,6 +36,7 @@ fi
 
 if _cmd_exist 'nvim'; then
     alias vim='nvim'
+    alias vi='nvim'
 fi
 
 if _cmd_exist 'doas'; then
@@ -38,8 +44,12 @@ if _cmd_exist 'doas'; then
     alias sudoedit='doasa rnano'
 fi
 
-alias unmount-network='umount -t cifs,nfs -a -l'
-alias mount-network='mount -t cifs,nfs -a'
+if _cmd_exist 'fastfetch'; then
+    alias neofetch='fastfetch'
+fi
+
+alias unmount-network='sudo umount -t cifs,nfs -a -l'
+alias mount-network='sudo mount -t cifs,nfs -a'
 
 alias find-local='nmap -n -sn 192.168.1.1/24'
 

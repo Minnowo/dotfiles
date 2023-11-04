@@ -2,13 +2,13 @@ AlsoSaveAsKra=false
 AntialiasSelectionOutline=false
 ArtColorSel.ColorSpace=0
 ArtColorSel.InversedSaturation=false
-ArtColorSel.Light=0.4644979414698872
+ArtColorSel.Light=0.36586250537983184
 ArtColorSel.LightPieces=11
 ArtColorSel.NumRings=7
 ArtColorSel.RingPieces=12
 ArtColorSel.SelColorH=0
-ArtColorSel.SelColorS=0.9536661204050663
-ArtColorSel.SelColorX=0.4644979414698872
+ArtColorSel.SelColorS=1
+ArtColorSel.SelColorX=0.36586250537983184
 ArtColorSel.defaultHueSteps=12
 ArtColorSel.defaultSaturationSteps=7
 ArtColorSel.defaultValueScaleSteps=11
@@ -29,16 +29,16 @@ CanvasSize/KeepAspectRatio=false
 ColorManagement/UseSystemMonitorProfile=false
 ConvertToImageColorSpaceOnImport=false
 CreateBackupFile=true
-ExportConfiguration-image/jpeg=<!DOCTYPE params>\n<params>\n <param type="internal" name="baseline">true</param>\n <param type="internal" name="exif">true</param>\n <param type="string" name="filters"><![CDATA[]]></param>\n <param type="internal" name="forceSRGB">false</param>\n <param type="internal" name="iptc">true</param>\n <param type="internal" name="optimize">true</param>\n <param type="internal" name="progressive">false</param>\n <param type="internal" name="quality">100</param>\n <param type="internal" name="saveProfile">true</param>\n <param type="internal" name="smoothing">0</param>\n <param type="internal" name="storeAuthor">false</param>\n <param type="internal" name="storeMetaData">false</param>\n <param type="internal" name="subsampling">0</param>\n <param type="color" name="transparencyFillcolor"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB b="1" g="1" r="1" space="sRGB-elle-V2-g10.icc"/>\n</color>\n]]></param>\n <param type="internal" name="xmp">true</param>\n</params>\n
-ExportConfiguration-image/png=<!DOCTYPE params>\n<params>\n <param name="alpha" type="internal">true</param>\n <param name="compression" type="internal">9</param>\n <param name="downsample" type="internal">false</param>\n <param name="forceSRGB" type="internal">false</param>\n <param name="indexed" type="internal">false</param>\n <param name="interlaced" type="internal">false</param>\n <param name="saveAsHDR" type="internal">false</param>\n <param name="saveSRGBProfile" type="internal">false</param>\n <param name="storeAuthor" type="internal">true</param>\n <param name="storeMetaData" type="internal">true</param>\n <param name="transparencyFillcolor" type="color"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB g="1" space="sRGB-elle-V2-g10.icc" b="1" r="1"/>\n</color>\n]]></param>\n</params>\n
+ExportConfiguration-image/jpeg=<!DOCTYPE params>\n<params>\n <param name="baseline" type="internal">true</param>\n <param name="exif" type="internal">true</param>\n <param name="filters" type="string"><![CDATA[]]></param>\n <param name="forceSRGB" type="internal">false</param>\n <param name="iptc" type="internal">true</param>\n <param name="optimize" type="internal">true</param>\n <param name="progressive" type="internal">false</param>\n <param name="quality" type="internal">100</param>\n <param name="saveProfile" type="internal">true</param>\n <param name="smoothing" type="internal">0</param>\n <param name="storeAuthor" type="internal">false</param>\n <param name="storeMetaData" type="internal">false</param>\n <param name="subsampling" type="internal">0</param>\n <param name="transparencyFillcolor" type="color"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB space="sRGB-elle-V2-g10.icc" g="1" b="1" r="1"/>\n</color>\n]]></param>\n <param name="xmp" type="internal">true</param>\n</params>\n
+ExportConfiguration-image/png=<!DOCTYPE params>\n<params>\n <param name="alpha" type="internal">true</param>\n <param name="compression" type="internal">9</param>\n <param name="downsample" type="internal">false</param>\n <param name="forceSRGB" type="internal">false</param>\n <param name="indexed" type="internal">false</param>\n <param name="interlaced" type="internal">false</param>\n <param name="saveAsHDR" type="internal">false</param>\n <param name="saveSRGBProfile" type="internal">false</param>\n <param name="storeAuthor" type="internal">true</param>\n <param name="storeMetaData" type="internal">true</param>\n <param name="transparencyFillcolor" type="color"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB b="1" r="1" space="sRGB-elle-V2-g10.icc" g="1"/>\n</color>\n]]></param>\n</params>\n
 FetchNews=true
-FilterSelector/LastUsedFilter=gaussian blur
+FilterSelector/LastUsedFilter=colorbalance
 GamutMasks.viewMode=0
 KineticScrollingEnabled=true
 KineticScrollingGesture=2
 KineticScrollingHideScrollbar=false
 KineticScrollingSensitivity=75
-KisDlgPreferences/CurrentPage=
+KisDlgPreferences/CurrentPage=canvasinput
 Krita/Ocio/DisplayDevice=sRGB
 Krita/Ocio/DisplayLook=None
 Krita/Ocio/DisplayView=Raw
@@ -48,10 +48,10 @@ Krita/Ocio/OcioConfigPath=
 Krita/Ocio/OcioLockColorVisualRepresentation=false
 Krita/Ocio/OcioLutPath=
 Krita/Ocio/UseOcio=false
-LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <Gray space="Gray-D50-elle-V2-srgbtrc.icc" g="0"/>\n</LastBackGroundColor>\n
-LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB b="0.0901960805058479" space="sRGB-elle-V2-srgbtrc.icc" r="0.925490200519562" g="0.0901960805058479"/>\n</LastForeGroundColor>\n
-LastPreset=Layout pen SOLID
-LastPreset_-1=Layout pen SOLID
+LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB g="0.819607853889465" space="sRGB-elle-V2-srgbtrc.icc" b="0.819607853889465" r="0.819607853889465"/>\n</LastBackGroundColor>\n
+LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB g="0" space="sRGB-elle-V2-srgbtrc.icc" b="0" r="0.745098054409027"/>\n</LastForeGroundColor>\n
+LastPreset=d) Ink-2 Fineliner
+LastPreset_-1=d) Ink-2 Fineliner
 LineSmoothingDelayDistance=1
 LineSmoothingDistance=70
 LineSmoothingFinishStabilizedCurve=false
@@ -63,13 +63,14 @@ LineSmoothingType=3
 LineSmoothingUseDelayDistance=false
 NumberOfLayersForNewImage=2
 OpenGLFilterMode=3
-PinnedFonts=DejaVu LGC Sans
+PinnedFonts=Arial,DejaVu Sans,DejaVu LGC Sans
 ResourceDirectory=/home/minno/.local/share/krita
 ShowEraserOutlineWhilePainting=true
 ShowGlobalSelection=false
 ShowOutlineWhilePainting=true
 ShowRootLayer=false
 SmoothZooming=false
+SpecificColorSelector/HsxMode=0
 SpecificColorSelector/UsePercentage=false
 ToolOptionsInDocker=true
 TrimFramesImport=false
@@ -103,6 +104,10 @@ colorModelDef=RGBA
 colorProfileDef=sRGB-elle-V2-srgbtrc.icc
 colorsettings/forcepalettecolors=false
 compressLayersInKra=false
+cumulativeUndoExcludeFromMerge=10
+cumulativeUndoMaxGroupDuration=5000
+cumulativeUndoMaxGroupSeparation=1000
+cumulativeUndoMergeTimeout=5000
 currentInputProfile=Krita Default
 cursorMaincColor=128,255,128
 custom_font_size=-1
@@ -119,13 +124,13 @@ disableTouchOnCanvas=false
 enableBrushSpeedLogging=false
 enableOpenGLFramerateLogging=false
 enablePerfLog=false
-enableProgressReporting=true
-eraserCursorMaincColor=128,255,128
+enableProgressReporting=false
+eraserCursorMaincColor=181,12,12
 eraserCursorStyle=9
 eraserOutlineStyle=2
 favoriteCompositeOps=normal,erase,multiply,burn,darken,add,dodge,screen,overlay,soft_light_svg,luminize,lighten,saturation,color,divide,diff
 favoritePresetsTag=Popup_Palette
-filterdialog/geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\xd1\x00\x00\x02I\x00\x00\x08\x02\x00\x00\x043\x00\x00\x04\xd2\x00\x00\x02J\x00\x00\x08\x01\x00\x00\x042\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x04\xd2\x00\x00\x02J\x00\x00\x08\x01\x00\x00\x042
+filterdialog/geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\xd5\x00\x00\x02M\x00\x00\x08\x04\x00\x00\x045\x00\x00\x04\xd5\x00\x00\x02M\x00\x00\x08\x04\x00\x00\x045\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x04\xd5\x00\x00\x02M\x00\x00\x08\x04\x00\x00\x045
 filterdialog/rememberlastpreset=false
 forceAlwaysFullSizedEraserOutline=false
 forceAlwaysFullSizedOutline=false
@@ -133,7 +138,7 @@ forcedDpiForQtFontBugWorkaround=-1
 fpsLimit=100
 frameRenderingClones=6
 frameRenderingTimeout=30000
-generatordialog/geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00F\x00\x00\x00\x87\x00\x00\x03F\x00\x00\x04z\x00\x00\x00G\x00\x00\x00\x88\x00\x00\x03E\x00\x00\x04y\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x00G\x00\x00\x00\x88\x00\x00\x03E\x00\x00\x04y
+generatordialog/geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00M\x00\x00\x00\x8e\x00\x00\x03M\x00\x00\x04\x81\x00\x00\x00N\x00\x00\x00\x8f\x00\x00\x03L\x00\x00\x04\x80\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x00N\x00\x00\x00\x8f\x00\x00\x03L\x00\x00\x04\x80
 globalSnapBoundingBox=false
 globalSnapExtension=false
 globalSnapImageBounds=true
@@ -148,10 +153,11 @@ gridsubdivisioncolor=150,150,150
 gridsubdivisionstyle=1
 guidesColor=99,99,99
 guidesLineStyle=0
+hideDevFundBanner=true
 hideDockersFullScreen=true
 hideMenuFullScreen=true
 hidePopups=false
-hideScrollbars=false
+hideScrollbars=true
 hideScrollbarsFullScreen=true
 hideStatusbarFullScreen=true
 hideTitleBarFullscreen=true
@@ -166,7 +172,8 @@ imagesizedlg_resunit=Pixels/Inch
 imagesizedlg_sizeunit=cm
 internal_selector_active_color_set=Animation Color Set
 internal_selector_active_color_set_md5=8e071366587a400f1db855c27014a5ec
-layerTreeIndentation=26
+layerThumbnailSize=29
+layerTreeIndentation=100
 layersizedlg_heightunit=px
 layersizedlg_keepar=true
 layersizedlg_keepprop=true
@@ -177,17 +184,20 @@ logviewer_enabled=false
 maxAllowedSpeedValue=30
 maxSwapSize=4096
 maximumBrushSize=1000
-mdiBackgroundColorXML=<!DOCTYPE color>\n<color channeldepth="U8">\n <RGB r="0.301960796117783" space="sRGB-elle-V2-srgbtrc.icc" b="0.301960796117783" g="0.301960796117783"/>\n</color>\n
+mdiBackgroundColorXML=<!DOCTYPE color>\n<color channeldepth="U8">\n <RGB g="0.301960796117783" b="0.301960796117783" r="0.301960796117783" space="sRGB-elle-V2-srgbtrc.icc"/>\n</color>\n
 mdiBackgroundImage=
+mdi_rubberband=1
 mdi_viewmode=1
 memoryHardLimitPercent=50
 memoryPoolLimitPercent=0
 memorySoftLimitPercent=2
 monitorProfile=sRGB-elle-V2-srgbtrc.icc
 monitorProfile/OverrideX11=false
+monitorProfileChimei Innolux Corporation__=sRGB-elle-V2-srgbtrc.icc
+monitorProfileDell Inc._DELL SP2309W-_U783F95N0AFS-=sRGB-elle-V2-srgbtrc.icc
 monitorProfile_1=sRGB-elle-V2-srgbtrc.icc
-moveToolChangedValueX=621
-moveToolChangedValueY=207
+moveToolChangedValueX=295
+moveToolChangedValueY=74
 moveToolUnit=0
 needsPixmapCacheWorkaround=false
 newCursorStyle=3
@@ -241,7 +251,7 @@ onionSkinState_9=false
 onionSkinTintColorBackward=255,0,0
 onionSkinTintFactor=191
 pasteBehaviour=0
-pasteFormat=0
+pasteFormat=3
 pixelGridColor=255,255,255
 pixelGridDrawingThreshold=24
 popuppalette/selectorSize=170
@@ -250,7 +260,7 @@ popuppalette/showRotationTrack=true
 popuppalette/size=400
 popuppalette/useDynamicSlotCount=true
 popuppalette/usevisualcolorselector=false
-presethistory=d) Ink-3 Gpen,v) Sketching-3 Leaky,d) Ink-8 Sumi-e,d) Ink-2 Fineliner,Nachowo,i) Wet Paint,Layout pen SOLID,a) Eraser Circle,d) Ink-1 Precision,b1) Airbrush - deevad 23.01
+presethistory=d) Ink-2 Fineliner,Nachowo,i) Wet Paint,Layout pen SOLID,a) Eraser Circle,d) Ink-1 Precision,b1) Airbrush - deevad 23.01,c) Pencil-2,Line Inart,b) Nacho-Pen
 recorder/captureinterval=1
 recorder/format=0
 recorder/recordautomatically=true
@@ -260,14 +270,17 @@ recorder_export/firstframesec=2
 recorder_export/lockratio=true
 recorder_export/resize=true
 recorder_export/resultpreview=false
-recorder_export/size=768,542
+recorder_export/size=768,554
 recorder_export/videodirectory=/home/minno/Videos
+renameMergedLayers=true
+renamePastedLayers=true
 renderIntent=0
 saveSessionOnQuit=false
-scratchpadVisible=true
+scratchpadVisible=false
 scrollingcheckers=false
+selectionOutlineOpacity=1
 selectionOverlayMaskColor=255,0,0,128
-separateEraserCursor=false
+separateEraserCursor=true
 sessionOnStartup=0
 setShowFilterGalleryLayerMaskDialog=true
 showAdditionalOnionSkinsSettings=true
@@ -294,14 +307,18 @@ useAnimationCacheFrameSizeLimit=true
 useAnimationCacheRegionOfInterest=true
 useBlackPointCompensation=true
 useCreamyAlphaDarken=true
+useCumulativeUndoRedo=false
 useDefaultColorSpace=false
+useLayerSelectionCheckbox=true
 useOnDiskAnimationCacheSwapping=true
 useOpenGLTextureBuffer=true
 useRightMiddleTabletButtonWorkaround=false
+useSubtractiveBlendingForCmykColorSpaces=true
 useTimestampsForBrushSpeed=false
 use_custom_system_font=false
 widgetStyle=Fusion
 zoomMarginSize=0
+zoomSteps=2
 
 [Author]
 active-profile=
@@ -310,7 +327,7 @@ active-profile=
 Choose the resource library to import=/home/minno/Downloads/krita_brush/uwu/Brushes and bundles
 DontUseNativeFileDialog=false
 ImportShortcuts=/run/media/minno/Data/dotfiles/Krita
-OpenDocument=/home/minno/Sync/General/DatabaseSystems/Lab02
+OpenDocument=/mnt/MyFiles/School/Year03/Sem01/Probability_Theory/Assignments
 OpenReferenceImage=/home/minno/Pictures
 SaveAs=/mnt/MyFiles/Documents/Krita
 krita_resources=/home/minno/Downloads/krita_brush/uwu/Brushes and bundles
@@ -332,8 +349,11 @@ detailViewIconSize=16
 [KisPreviewFileDialog]
 show_preview=true
 
+[KisResourceItemChooser_paintoppresets]
+splitterState_1row=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\xff\xff\xff\xff\xff\xff\xff\xff\x01\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
+
 [KisShortcutsDialog Settings]
-Dialog Size=810,520
+Dialog Size=887,561
 
 [KisToolCrop]
 allowGrow=true
@@ -360,6 +380,9 @@ patternTransformScale=100
 outlineType=1
 patternTransformScale=100
 
+[KisToolSelectBase]
+selectionMode=1
+
 [KisToolSelectContiguous]
 antiAliasSelection=false
 useSelectionAsBoundary=false
@@ -368,7 +391,12 @@ useSelectionAsBoundary=false
 roundCornersX=0
 roundCornersY=0
 
+[KisToolSelectOutline]
+antiAliasSelection=false
+
 [KisToolSelectRectangular]
+antiAliasSelection=false
+growSelection=0
 roundCornersX=0
 roundCornersY=0
 
@@ -387,8 +415,8 @@ thresholdAmount=4
 
 [KritaShape/KisToolDyna]
 angleAmount=20
-dragAmount=0.98
-massAmount=0.01
+dragAmount=0.14
+massAmount=0.98
 
 [KritaShape/KisToolEllipse]
 outlineType=1
@@ -401,6 +429,7 @@ handsCount=4
 transformMode=0
 
 [KritaShape/KisToolRectangle]
+fillType=2
 outlineType=1
 patternTransformScale=100
 roundCornersX=0
@@ -410,85 +439,87 @@ roundCornersY=0
 forceLodMode=false
 
 [MainWindow]
-2 screens: Height=1152
+2 screens: Height=1090
 2 screens: Width=2048
 2 screens: Window-Maximized=true
 HDMI-0 eDP-1-1 Window-Maximized 2048x1152 HDMI-0=true
 HDMI-1-0 eDP-1 Window-Maximized 2048x1152 HDMI-1-0=true
-State=AAAA/wAAAAD9AAAABAAAAAAAAADTAAAEAvwCAAAABvsAAAAOAFQAbwBvAGwAQgBvAHgBAAAAPAAAAV4AAAAzAP////wAAAGgAAAA7wAAAFUA////+gAAAAEBAAAAAvsAAAAWAEMAbwBsAG8AcgBTAGwAaQBkAGUAcgEAAAAA/////wAAAAAAAAAA+wAAABoAUABhAGwAZQB0AHQAZQBEAG8AYwBrAGUAcgEAAAAA/////wAAAJgA/////AAAApUAAAGpAAAAbwD////6AAAAAAEAAAAC+wAAAB4AQwBvAGwAbwByAFMAZQBsAGUAYwB0AG8AcgBOAGcBAAAAAP////8AAABGAP////sAAAAqAFMAcABlAGMAaQBmAGkAYwBDAG8AbABvAHIAUwBlAGwAZQBjAHQAbwByAAAAAAAAAAEBAAAA6gD////7AAAAGABQAHIAZQBzAGUAdABEAG8AYwBrAGUAcgAAAAL5AAABJQAAAHcA////+wAAACQARgBsAG8AdwBTAGgAYQBwAGUAQgBvAHgARABvAGMAawBlAHIAAAADagAAAMcAAAAAAAAAAPsAAAAoAEYAbABvAHcAUwB0AGUAbgBjAGkAbABCAG8AeABEAG8AYwBrAGUAcgAAAAN9AAAAxwAAAAAAAAAAAAAAAQAAAQUAAAQC/AIAAABD+wAAABoASwBpAHMAQgBpAHIAZABlAHkAZQBCAG8AeAAAAAAA/////wAAAAAAAAAA+wAAACAASwBpAHMAUABhAGwAZQB0AHQAZQBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAABoASwBvAEMAbwBsAG8AcgBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAADAASwBpAHMAVAByAGkAYQBuAGcAbABlAEMAbwBsAG8AcgBTAGUAbABlAGMAdABvAHIAAAAAAP////8AAAAAAAAAAPsAAAAiAFMAaABhAGQAbwB3ACAAUAByAG8AcABlAHIAdABpAGUAcwAAAAAA/////wAAAAAAAAAA+wAAACAAUwBoAGEAcABlACAAUAByAG8AcABlAHIAdABpAGUAcwAAAAAA/////wAAAAAAAAAA+wAAABoAUwBoAGEAcABlAFMAZQBsAGUAYwB0AG8AcgAAAABIAAAARAAAAAAAAAAA+wAAACQAUwBpAG0AcABsAGUAIABUAGUAeAB0ACAARQBkAGkAdABvAHIAAAAAAP////8AAAAAAAAAAPsAAAAcAE8AdgBlAHIAdgBpAGUAdwBEAG8AYwBrAGUAcgAAAAA8AAAAmgAAAH0A////+wAAACoAUwBoAGEAcABlAEMAbwBsAGwAZQBjAHQAaQBvAG4ARABvAGMAawBlAHIAAAABDAAAAZQAAAAAAAAAAPsAAABGAEsAcgBpAHQAYQBTAGgAYQBwAGUALwBLAGkAcwBUAG8AbwBsAEQAeQBuAGEAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAEAAABSAAAAEgAAAAAAAAAA+wAAACwASwByAGkAdABhAFMAaABhAHAAZQAvAEsAaQBzAFQAbwBvAGwATABpAG4AZQEAAAA8AAAAaQAAAAAAAAAA+wAAADIASwByAGkAdABhAFMAaABhAHAAZQAvAEsAaQBzAFQAbwBvAGwARQBsAGwAaQBwAHMAZQEAAACRAAAAEgAAAAAAAAAA+wAAABwASwBpAHMAVABvAG8AbABQAG8AbAB5AGcAbwBuAQAAAKYAAAASAAAAAAAAAAD7AAAAHgBLAGkAcwBUAG8AbwBsAFAAbwBsAHkAbABpAG4AZQEAAAC7AAAAEgAAAAAAAAAA+wAAABYASwBpAHMAVABvAG8AbABTAHQAYQByAQAAANAAAAATAAAAAAAAAAD7AAAAKgBTAG4AYQBwAEcAdQBpAGQAZQBDAG8AbgBmAGkAZwBXAGkAZABnAGUAdAAAAADvAAAAcQAAAAAAAAAA+wAAADIASwBpAHMAVABvAG8AbABDAHIAbwBwACAAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAEAAAD7AAAAEgAAAAAAAAAA+wAAAFAASwByAGkAdABhAFQAcgBhAG4AcwBmAG8AcgBtAC8ASwBpAHMAVABvAG8AbABNAG8AdgBlACAATwBwAHQAaQBvAG4AIABXAGkAZABnAGUAdAEAAAEQAAAAEgAAAAAAAAAA+wAAADwASwBpAHMAVABvAG8AbABUAHIAYQBuAHMAZgBvAHIAbQAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAAAPAAAAC8AAAAAAAAAAPsAAABOAEsAcgBpAHQAYQBTAGgAYQBwAGUALwBLAGkAcwBUAG8AbwBsAE0AZQBhAHMAdQByAGUAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAADwAAABCAAAAAAAAAAD7AAAAXABLAHIAaQB0AGEAUwBlAGwAZQBjAHQAZQBkAC8ASwBpAHMAVABvAG8AbABDAG8AbABvAHIAUABpAGMAawBlAHIAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAADwAAAD/AAAAAAAAAAD7AAAARgBLAGkAcwBSAHUAbABlAHIAQQBzAHMAaQBzAHQAYQBuAHQAVABvAG8AbAAgAE8AcAB0AGkAbwBuACAAVwBpAGQAZwBlAHQBAAAAPAAAABIAAAAAAAAAAPsAAABIAEsAaQBzAFQAbwBvAGwAUABlAHIAcwBwAGUAYwB0AGkAdgBlAEcAcgBpAGQAIABPAHAAdABpAG8AbgAgAFcAaQBkAGcAZQB0AQAAAaMAAAASAAAAAAAAAAD7AAAAMgBLAGkAcwBUAG8AbwBsAEcAcgBpAGQAIABPAHAAdABpAG8AbgAgAFcAaQBkAGcAZQB0AQAAAbgAAAATAAAAAAAAAAD7AAAATABLAGkAcwBUAG8AbwBsAFMAZQBsAGUAYwB0AFIAZQBjAHQAYQBuAGcAdQBsAGEAcgAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAABzgAAABIAAAAAAAAAAPsAAABKAEsAaQBzAFQAbwBvAGwAUwBlAGwAZQBjAHQARQBsAGwAaQBwAHQAaQBjAGEAbAAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAAB4wAAABIAAAAAAAAAAPsAAABIAEsAaQBzAFQAbwBvAGwAUwBlAGwAZQBjAHQAUABvAGwAeQBnAG8AbgBhAGwAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAAfgAAAASAAAAAAAAAAD7AAAARABLAGkAcwBUAG8AbwBsAFMAZQBsAGUAYwB0AE8AdQB0AGwAaQBuAGUAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAAg0AAAASAAAAAAAAAAD7AAAASgBLAGkAcwBUAG8AbwBsAFMAZQBsAGUAYwB0AEMAbwBuAHQAaQBnAHUAbwB1AHMAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAAiIAAAASAAAAAAAAAAD7AAAARABLAGkAcwBUAG8AbwBsAFMAZQBsAGUAYwB0AFMAaQBtAGkAbABhAHIAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAAjcAAAASAAAAAAAAAAD8AAAAPAAAAFIAAAAAAP////oAAAAAAQAAAAL7AAAALgBLAG8AUwBoAGEAcABlAEMAbwBsAGwAZQBjAHQAaQBvAG4ARABvAGMAawBlAHIBAAAAAP////8AAAAAAAAAAPsAAAAkAFMAbQBhAGwAbABDAG8AbABvAHIAUwBlAGwAZQBjAHQAbwByAAAAA24AAAEEAAAARgD////8AAAAPAAAAroAAADVAQAAHPoAAAAAAQAAAAf7AAAAFgBLAGkAcwBMAGEAeQBlAHIAQgBvAHgBAAAAAP////8AAAECAP////sAAAAiAEMAbwBtAHAAbwBzAGkAdABpAG8AbgBEAG8AYwBrAGUAcgAAAAAA/////wAAALAA////+wAAAA4ASABpAHMAdABvAHIAeQEAAAAA/////wAAAEgA////+wAAABwAUgBlAGMAbwByAGQAZQByAEQAbwBjAGsAZQByAQAAAAD/////AAAARgD////7AAAAFgBJAG0AYQBnAGUARABvAGMAawBlAHIAAAAAAP////8AAAAAAAAAAPsAAAAaAEMAaABhAG4AbgBlAGwARABvAGMAawBlAHIAAAAAAP////8AAABGAP////sAAAAuAEsAaQBzAFAAYQBpAG4AdABlAHIAbAB5AE0AaQB4AGUAcgBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAACAAcwBoAGEAcgBlAGQAdABvAG8AbABkAG8AYwBrAGUAcgEAAAL8AAABQgAAAFUA////+wAAADYAcAB5AGsAcgBpAHQAYQBfAGMAbwBtAHAAYQBjAHQAYgByAHUAcwBoAHQAbwBnAGcAbABlAHIBAAADLwAAAO8AAAAAAAAAAPsAAAAsAHAAeQBrAHIAaQB0AGEAXwBzAGUAbABlAGMAdABpAG8AbgBwAG8AcAB1AHAAAAADeQAAAKUAAAAAAAAAAPsAAABIAEsAcgBpAHQAYQBTAGgAYQBwAGUALwBLAGkAcwBUAG8AbwBsAEIAcgB1AHMAaABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAA9wAAABoAAAAAAAAAAD7AAAAIgBTAHQAcgBvAGsAZQAgAFAAcgBvAHAAZQByAHQAaQBlAHMAAAAAAP////8AAAAAAAAAAPsAAAAWAFMAdAB5AGwAZQBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAACAASwBpAHMASABpAHMAdABvAGcAcgBhAG0ARABvAGMAawAAAAAA/////wAAAAAAAAAA+wAAABIAUwBjAHIAaQBwAHQAaQBuAGcAAAAAAP////8AAAAAAAAAAPsAAAAwAEQAZQBmAGEAdQBsAHQAVABvAG8AbABBAHIAcgBhAG4AZwBlAFcAaQBkAGcAZQB0AAAAArwAAABSAAAAAAAAAAD7AAAAIgBEAGUAZgBhAHUAbAB0AFQAbwBvAGwAVwBpAGQAZwBlAHQAAAADEQAAAFsAAAAAAAAAAPsAAAAkAEsAaQBzAEgAaQBzAHQAbwBnAHIAYQBtAEQAbwBjAGsAZQByAAAAAkIAAAB7AAAAAAAAAAD7AAAAGABEAGkAZwBpAHQAYQBsAE0AaQB4AGUAcgIAAANWAAABygAAAkkAAAGx+wAAAE4ASwByAGkAdABhAEYAaQBsAGwALwBLAGkAcwBUAG8AbwBsAEcAcgBhAGQAaQBlAG4AdAAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQAAAAEKAAAABwAAAAAAAAAAPsAAABGAEsAcgBpAHQAYQBGAGkAbABsAC8ASwBpAHMAVABvAG8AbABGAGkAbABsACAAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAAAAANQAAAAHAAAAAAAAAAA+wAAADYASwByAGkAdABhAFMAaABhAHAAZQAvAEsAaQBzAFQAbwBvAGwAUgBlAGMAdABhAG4AZwBsAGUAAAADBQAAAGcAAAAAAAAAAPsAAAAqAEEAcgB0AGkAcwB0AGkAYwBDAG8AbABvAHIAUwBlAGwAZQBjAHQAbwByAAAAAAD/////AAAAdQD////7AAAAGgBQAGEAdAB0AGUAcgBuAEQAbwBjAGsAZQByAAAAAtkAAAFJAAABSgAIABD7AAAAGgBUAGEAcwBrAHMAZQB0AEQAbwBjAGsAZQByAAAAAAD/////AAAAdgD////7AAAAKABTAG4AYQBwAEcAdQBpAGQAZQAgAFAAcgBvAHAAZQByAHQAaQBlAHMAAAAAAP////8AAAAAAAAAAPsAAAA4AFQAZQB4AHQARABvAGMAdQBtAGUAbgB0AEkAbgBzAHAAZQBjAHQAaQBvAG4ARABvAGMAawBlAHICAAAEmgAAAhUAAAEqAAAArvsAAAASAEwAdQB0AEQAbwBjAGsAZQByAAAAAAD/////AAABQAD////7AAAAFABHAHIAaQBkAEQAbwBjAGsAZQByAAAAAAD/////AAABKwD////7AAAAHgBIAGkAcwB0AG8AZwByAGEAbQBEAG8AYwBrAGUAcgAAAAAA/////wAAAEUA////+wAAABoAUAByAGUAcwBlAHQASABpAHMAdABvAHIAeQAAAAAA/////wAAAFcA////+wAAACYAbABhAHMAdABkAG8AYwB1AG0AZQBuAHQAcwBkAG8AYwBrAGUAcgAAAAAA/////wAAAHgA////+wAAABIARwBhAG0AdQB0AE0AYQBzAGsAAAAAAP////8AAAEkAP////sAAAAaAEEAcgByAGEAbgBnAGUARABvAGMAawBlAHIAAAAAAP////8AAAA2AP////sAAAASAEwAbwBnAEQAbwBjAGsAZQByAAAAAAD/////AAAAdgD////7AAAAKgBxAHUAaQBjAGsAXwBzAGUAdAB0AGkAbgBnAHMAXwBkAG8AYwBrAGUAcgAAAAAA/////wAAAHoA////+wAAADoAYwBvAG0AaQBjAHMAXwBwAHIAbwBqAGUAYwB0AF8AbQBhAG4AYQBnAGUAcgBfAGQAbwBjAGsAZQByAAAAAAD/////AAAAtwD////7AAAAEABTAG4AYQBwAHMAaABvAHQAAAAAAP////8AAAB2AP////sAAAAyAFMAdgBnAFMAeQBtAGIAbwBsAEMAbwBsAGwAZQBjAHQAaQBvAG4ARABvAGMAawBlAHIAAAAAAP////8AAAB4AP////sAAAAgAFMAdABvAHIAeQBiAG8AYQByAGQARABvAGMAawBlAHIAAAAAAP////8AAADUAP////sAAAAWAFQAbwB1AGMAaABEAG8AYwBrAGUAcgAAAAAA/////wAAABEA////AAAAAgAAB/wAAAC8/AEAAAAB+wAAABoAVABvAG8AbABCAGEAcgBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAAAAAAAwAAAAAAAAAA/AEAAAAF+wAAABwARgBsAGkAcABiAG8AbwBrAEQAbwBjAGsAZQByAAAAAAD/////AAAAAAAAAAD7AAAAIABPAG4AaQBvAG4AUwBrAGkAbgBzAEQAbwBjAGsAZQByAAAAAAD/////AAABUAD////7AAAAHgBBAG4AaQBtAGEAdABpAG8AbgBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAABwAVABpAG0AZQBsAGkAbgBlAEQAbwBjAGsAZQByAAAAAAD/////AAADjQD////7AAAAKgBBAG4AaQBtAGEAdABpAG8AbgBDAHUAcgB2AGUAcwBEAG8AYwBrAGUAcgAAAAAA/////wAABHcA////AAAGHAAABAIAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAeAEIAcgB1AHMAaABlAHMAQQBuAGQAUwB0AHUAZgBmAQAAALj/////AAAAAAAAAAA=
-ko_geometry=AdnQywADAAAAAAAAAAAAIAAAB/8AAAR/AAACqwAAAQ4AAAf/AAAD0gAAAAACAAAACAAAAAAAAAAAIAAAB/8AAAR/
+State=AAAA/wAAAAD9AAAABAAAAAAAAAA0AAAEAvwCAAAABvsAAAAOAFQAbwBvAGwAQgBvAHgBAAAAPAAABAIAAAAtAP////wAAAGrAAAA9wAAAAAA////+gAAAAABAAAAAfsAAAAWAEMAbwBsAG8AcgBTAGwAaQBkAGUAcgEAAAAA/////wAAAAAAAAAA+wAAACoAUwBwAGUAYwBpAGYAaQBjAEMAbwBsAG8AcgBTAGUAbABlAGMAdABvAHIAAAACHQAAAkEAAAAxAP////sAAAAYAFAAcgBlAHMAZQB0AEQAbwBjAGsAZQByAAAAAvkAAAElAAAANAD////7AAAAJABGAGwAbwB3AFMAaABhAHAAZQBCAG8AeABEAG8AYwBrAGUAcgAAAANqAAAAxwAAAAAAAAAA+wAAACgARgBsAG8AdwBTAHQAZQBuAGMAaQBsAEIAbwB4AEQAbwBjAGsAZQByAAAAA30AAADHAAAAAAAAAAAAAAABAAABUQAABAL8AgAAAET7AAAAGgBLAGkAcwBCAGkAcgBkAGUAeQBlAEIAbwB4AAAAAAD/////AAAAAAAAAAD7AAAAIABLAGkAcwBQAGEAbABlAHQAdABlAEQAbwBjAGsAZQByAAAAAAD/////AAAAAAAAAAD7AAAAGgBLAG8AQwBvAGwAbwByAEQAbwBjAGsAZQByAAAAAAD/////AAAAAAAAAAD7AAAAMABLAGkAcwBUAHIAaQBhAG4AZwBsAGUAQwBvAGwAbwByAFMAZQBsAGUAYwB0AG8AcgAAAAAA/////wAAAAAAAAAA+wAAACIAUwBoAGEAZABvAHcAIABQAHIAbwBwAGUAcgB0AGkAZQBzAAAAAAD/////AAAAAAAAAAD7AAAAIABTAGgAYQBwAGUAIABQAHIAbwBwAGUAcgB0AGkAZQBzAAAAAAD/////AAAAAAAAAAD7AAAAGgBTAGgAYQBwAGUAUwBlAGwAZQBjAHQAbwByAAAAAEgAAABEAAAAAAAAAAD7AAAAJABTAGkAbQBwAGwAZQAgAFQAZQB4AHQAIABFAGQAaQB0AG8AcgAAAAAA/////wAAAAAAAAAA+wAAABwATwB2AGUAcgB2AGkAZQB3AEQAbwBjAGsAZQByAAAAADwAAACaAAAAfQD////7AAAAKgBTAGgAYQBwAGUAQwBvAGwAbABlAGMAdABpAG8AbgBEAG8AYwBrAGUAcgAAAAEMAAABlAAAAAAAAAAA+wAAAEYASwByAGkAdABhAFMAaABhAHAAZQAvAEsAaQBzAFQAbwBvAGwARAB5AG4AYQBvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAAFIAAAASAAAAAAAAAAD7AAAALABLAHIAaQB0AGEAUwBoAGEAcABlAC8ASwBpAHMAVABvAG8AbABMAGkAbgBlAQAAADwAAABpAAAAAAAAAAD7AAAAMgBLAHIAaQB0AGEAUwBoAGEAcABlAC8ASwBpAHMAVABvAG8AbABFAGwAbABpAHAAcwBlAQAAAJEAAAASAAAAAAAAAAD7AAAAHABLAGkAcwBUAG8AbwBsAFAAbwBsAHkAZwBvAG4BAAAApgAAABIAAAAAAAAAAPsAAAAeAEsAaQBzAFQAbwBvAGwAUABvAGwAeQBsAGkAbgBlAQAAALsAAAASAAAAAAAAAAD7AAAAFgBLAGkAcwBUAG8AbwBsAFMAdABhAHIBAAAA0AAAABMAAAAAAAAAAPsAAAAqAFMAbgBhAHAARwB1AGkAZABlAEMAbwBuAGYAaQBnAFcAaQBkAGcAZQB0AAAAAO8AAABxAAAAAAAAAAD7AAAAMgBLAGkAcwBUAG8AbwBsAEMAcgBvAHAAIABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAAPsAAAASAAAAAAAAAAD7AAAAUABLAHIAaQB0AGEAVAByAGEAbgBzAGYAbwByAG0ALwBLAGkAcwBUAG8AbwBsAE0AbwB2AGUAIABPAHAAdABpAG8AbgAgAFcAaQBkAGcAZQB0AQAAARAAAAASAAAAAAAAAAD7AAAAPABLAGkAcwBUAG8AbwBsAFQAcgBhAG4AcwBmAG8AcgBtACAAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAEAAAA8AAAALwAAAAAAAAAA+wAAAE4ASwByAGkAdABhAFMAaABhAHAAZQAvAEsAaQBzAFQAbwBvAGwATQBlAGEAcwB1AHIAZQAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAAAPAAAAEIAAAAAAAAAAPsAAABcAEsAcgBpAHQAYQBTAGUAbABlAGMAdABlAGQALwBLAGkAcwBUAG8AbwBsAEMAbwBsAG8AcgBQAGkAYwBrAGUAcgAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAAAPAAAAP8AAAAAAAAAAPsAAABGAEsAaQBzAFIAdQBsAGUAcgBBAHMAcwBpAHMAdABhAG4AdABUAG8AbwBsACAATwBwAHQAaQBvAG4AIABXAGkAZABnAGUAdAEAAAA8AAAAEgAAAAAAAAAA+wAAAEgASwBpAHMAVABvAG8AbABQAGUAcgBzAHAAZQBjAHQAaQB2AGUARwByAGkAZAAgAE8AcAB0AGkAbwBuACAAVwBpAGQAZwBlAHQBAAABowAAABIAAAAAAAAAAPsAAAAyAEsAaQBzAFQAbwBvAGwARwByAGkAZAAgAE8AcAB0AGkAbwBuACAAVwBpAGQAZwBlAHQBAAABuAAAABMAAAAAAAAAAPsAAABMAEsAaQBzAFQAbwBvAGwAUwBlAGwAZQBjAHQAUgBlAGMAdABhAG4AZwB1AGwAYQByACAAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAEAAAHOAAAAEgAAAAAAAAAA+wAAAEoASwBpAHMAVABvAG8AbABTAGUAbABlAGMAdABFAGwAbABpAHAAdABpAGMAYQBsACAAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAEAAAHjAAAAEgAAAAAAAAAA+wAAAEgASwBpAHMAVABvAG8AbABTAGUAbABlAGMAdABQAG8AbAB5AGcAbwBuAGEAbAAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAAB+AAAABIAAAAAAAAAAPsAAABEAEsAaQBzAFQAbwBvAGwAUwBlAGwAZQBjAHQATwB1AHQAbABpAG4AZQAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAACDQAAABIAAAAAAAAAAPsAAABKAEsAaQBzAFQAbwBvAGwAUwBlAGwAZQBjAHQAQwBvAG4AdABpAGcAdQBvAHUAcwAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAACIgAAABIAAAAAAAAAAPsAAABEAEsAaQBzAFQAbwBvAGwAUwBlAGwAZQBjAHQAUwBpAG0AaQBsAGEAcgAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQBAAACNwAAABIAAAAAAAAAAPwAAAA8AAAAUgAAAAAA////+gAAAAABAAAAAvsAAAAuAEsAbwBTAGgAYQBwAGUAQwBvAGwAbABlAGMAdABpAG8AbgBEAG8AYwBrAGUAcgEAAAAA/////wAAAAAAAAAA+wAAACQAUwBtAGEAbABsAEMAbwBsAG8AcgBTAGUAbABlAGMAdABvAHIAAAADbgAAAQQAAABGAP////wAAAA8AAACigAAANUBAAAc+gAAAAABAAAACPsAAAAWAEsAaQBzAEwAYQB5AGUAcgBCAG8AeAEAAAAA/////wAAAQIA////+wAAABoAUABhAGwAZQB0AHQAZQBEAG8AYwBrAGUAcgEAAAAA/////wAAALYA////+wAAACIAQwBvAG0AcABvAHMAaQB0AGkAbwBuAEQAbwBjAGsAZQByAAAAAAD/////AAAAsAD////7AAAADgBIAGkAcwB0AG8AcgB5AAAAAAD/////AAAARgD////7AAAAHABSAGUAYwBvAHIAZABlAHIARABvAGMAawBlAHIBAAAAAP////8AAABGAP////sAAAAWAEkAbQBhAGcAZQBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAABoAQwBoAGEAbgBuAGUAbABEAG8AYwBrAGUAcgAAAAAA/////wAAAEYA////+wAAAC4ASwBpAHMAUABhAGkAbgB0AGUAcgBsAHkATQBpAHgAZQByAEQAbwBjAGsAZQByAAAAAAD/////AAAAAAAAAAD8AAACzAAAAXIAAACMAQAAHPoAAAAAAQAAAAL7AAAAIABzAGgAYQByAGUAZAB0AG8AbwBsAGQAbwBjAGsAZQByAQAAAlIAAAGsAAAARgD////7AAAAHgBDAG8AbABvAHIAUwBlAGwAZQBjAHQAbwByAE4AZwEAAAAA/////wAAAEYA////+wAAADYAcAB5AGsAcgBpAHQAYQBfAGMAbwBtAHAAYQBjAHQAYgByAHUAcwBoAHQAbwBnAGcAbABlAHIBAAADLwAAAO8AAAAAAAAAAPsAAAAsAHAAeQBrAHIAaQB0AGEAXwBzAGUAbABlAGMAdABpAG8AbgBwAG8AcAB1AHAAAAADeQAAAKUAAAAAAAAAAPsAAABIAEsAcgBpAHQAYQBTAGgAYQBwAGUALwBLAGkAcwBUAG8AbwBsAEIAcgB1AHMAaABvAHAAdABpAG8AbgAgAHcAaQBkAGcAZQB0AQAAA9wAAABoAAAAAAAAAAD7AAAAIgBTAHQAcgBvAGsAZQAgAFAAcgBvAHAAZQByAHQAaQBlAHMAAAAAAP////8AAAAAAAAAAPsAAAAWAFMAdAB5AGwAZQBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAACAASwBpAHMASABpAHMAdABvAGcAcgBhAG0ARABvAGMAawAAAAAA/////wAAAAAAAAAA+wAAABIAUwBjAHIAaQBwAHQAaQBuAGcAAAAAAP////8AAAAAAAAAAPsAAAAwAEQAZQBmAGEAdQBsAHQAVABvAG8AbABBAHIAcgBhAG4AZwBlAFcAaQBkAGcAZQB0AAAAArwAAABSAAAAAAAAAAD7AAAAIgBEAGUAZgBhAHUAbAB0AFQAbwBvAGwAVwBpAGQAZwBlAHQAAAADEQAAAFsAAAAAAAAAAPsAAAAkAEsAaQBzAEgAaQBzAHQAbwBnAHIAYQBtAEQAbwBjAGsAZQByAAAAAkIAAAB7AAAAAAAAAAD7AAAAGABEAGkAZwBpAHQAYQBsAE0AaQB4AGUAcgIAAANWAAABygAAAkkAAAGx+wAAAE4ASwByAGkAdABhAEYAaQBsAGwALwBLAGkAcwBUAG8AbwBsAEcAcgBhAGQAaQBlAG4AdAAgAG8AcAB0AGkAbwBuACAAdwBpAGQAZwBlAHQAAAAEKAAAABwAAAAAAAAAAPsAAABGAEsAcgBpAHQAYQBGAGkAbABsAC8ASwBpAHMAVABvAG8AbABGAGkAbABsACAAbwBwAHQAaQBvAG4AIAB3AGkAZABnAGUAdAAAAANQAAAAHAAAAAAAAAAA+wAAADYASwByAGkAdABhAFMAaABhAHAAZQAvAEsAaQBzAFQAbwBvAGwAUgBlAGMAdABhAG4AZwBsAGUAAAADBQAAAGcAAAAAAAAAAPsAAAAqAEEAcgB0AGkAcwB0AGkAYwBDAG8AbABvAHIAUwBlAGwAZQBjAHQAbwByAgAAAo8AAADqAAACxwAAAtz7AAAAGgBQAGEAdAB0AGUAcgBuAEQAbwBjAGsAZQByAAAAAtkAAAFJAAABBwAIABD7AAAAGgBUAGEAcwBrAHMAZQB0AEQAbwBjAGsAZQByAAAAAAD/////AAAAdgD////7AAAAKABTAG4AYQBwAEcAdQBpAGQAZQAgAFAAcgBvAHAAZQByAHQAaQBlAHMAAAAAAP////8AAAAAAAAAAPsAAAA4AFQAZQB4AHQARABvAGMAdQBtAGUAbgB0AEkAbgBzAHAAZQBjAHQAaQBvAG4ARABvAGMAawBlAHICAAAEmgAAAhUAAAEqAAAArvsAAAASAEwAdQB0AEQAbwBjAGsAZQByAAAAAAD/////AAABYQD////7AAAAFABHAHIAaQBkAEQAbwBjAGsAZQByAAAAAAD/////AAABKwD////7AAAAHgBIAGkAcwB0AG8AZwByAGEAbQBEAG8AYwBrAGUAcgAAAAAA/////wAAAEUA////+wAAABoAUAByAGUAcwBlAHQASABpAHMAdABvAHIAeQAAAAAA/////wAAAFcA////+wAAACYAbABhAHMAdABkAG8AYwB1AG0AZQBuAHQAcwBkAG8AYwBrAGUAcgAAAAAA/////wAAAHgA////+wAAABIARwBhAG0AdQB0AE0AYQBzAGsAAAAAAP////8AAACqAP////sAAAAaAEEAcgByAGEAbgBnAGUARABvAGMAawBlAHIAAAAAAP////8AAAA2AP////sAAAASAEwAbwBnAEQAbwBjAGsAZQByAAAAAAD/////AAAAeQD////7AAAAKgBxAHUAaQBjAGsAXwBzAGUAdAB0AGkAbgBnAHMAXwBkAG8AYwBrAGUAcgAAAAAA/////wAAAHoA////+wAAADoAYwBvAG0AaQBjAHMAXwBwAHIAbwBqAGUAYwB0AF8AbQBhAG4AYQBnAGUAcgBfAGQAbwBjAGsAZQByAAAAAAD/////AAAAtwD////7AAAAEABTAG4AYQBwAHMAaABvAHQAAAAAAP////8AAAB2AP////sAAAAyAFMAdgBnAFMAeQBtAGIAbwBsAEMAbwBsAGwAZQBjAHQAaQBvAG4ARABvAGMAawBlAHIAAAAAAP////8AAAB4AP////sAAAAgAFMAdABvAHIAeQBiAG8AYQByAGQARABvAGMAawBlAHIAAAAAAP////8AAACaAP////sAAAAWAFQAbwB1AGMAaABEAG8AYwBrAGUAcgAAAAAA/////wAAABEA////+wAAACwAVwBpAGQAZQBHAGEAbQB1AHQAQwBvAGwAbwByAFMAZQBsAGUAYwB0AG8AcgAAAAAA/////wAAAK4A////AAAAAgAAB/wAAAC8/AEAAAAB+wAAABoAVABvAG8AbABCAGEAcgBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAAAAAAAwAACAAAAABo/AEAAAAF+wAAABwARgBsAGkAcABiAG8AbwBrAEQAbwBjAGsAZQByAAAAAAD/////AAAAAAAAAAD7AAAAIABPAG4AaQBvAG4AUwBrAGkAbgBzAEQAbwBjAGsAZQByAAAAAAD/////AAABbQD////7AAAAHgBBAG4AaQBtAGEAdABpAG8AbgBEAG8AYwBrAGUAcgAAAAAA/////wAAAAAAAAAA+wAAABwAVABpAG0AZQBsAGkAbgBlAEQAbwBjAGsAZQByAAAAAAD/////AAADqwD////7AAAAKgBBAG4AaQBtAGEAdABpAG8AbgBDAHUAcgB2AGUAcwBEAG8AYwBrAGUAcgAAAAAA/////wAABU4A////AAAGbwAABAIAAAAEAAAABAAAAAgAAAAI/AAAAAIAAAACAAAAAAAAAAIAAAADAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAB4AQgByAHUAcwBoAGUAcwBBAG4AZABTAHQAdQBmAGYBAAAAZv////8AAAAAAAAAAAAAABYAZQBkAGkAdABUAG8AbwBsAEIAYQByAQAABV//////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Window-Maximized 1152x2048=true
+ko_geometry=AdnQywADAAAAAAAAAAAAIAAAB/8AAAR/AAAFVgAAACEAAAf+AAAEfgAAAAACAAAACAAAAAAAAAAAIAAAB/8AAAR/
 
 [MainWindow][DockWidget AnimationCurvesDocker]
 DockArea=8
 Locked=false
-height=448
-width=1358
+height=480
+width=640
 xPosition=0
-yPosition=32
+yPosition=0
 
 [MainWindow][DockWidget ArrangeDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=264
+width=222
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget ArtisticColorSelector]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=284
+width=334
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget ChannelDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=30
+width=100
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget ColorSelectorNg]
-DockArea=1
+DockArea=2
 Locked=false
-height=408
-width=211
+height=463
+width=640
 xPosition=0
 yPosition=17
 
 [MainWindow][DockWidget CompositionDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=300
+width=400
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget DigitalMixer]
 DockArea=2
 Locked=false
-height=414
-width=583
-xPosition=1
-yPosition=18
+height=30
+width=100
+xPosition=0
+yPosition=0
 
 [MainWindow][DockWidget GamutMask]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=322
+width=363
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget GridDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=527
+width=258
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget HistogramDocker]
 DockArea=2
@@ -509,74 +540,74 @@ yPosition=17
 [MainWindow][DockWidget KisLayerBox]
 DockArea=2
 Locked=false
-height=652
-width=261
+height=604
+width=337
 xPosition=0
 yPosition=17
 
 [MainWindow][DockWidget LogDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=260
+width=400
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget LutDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=328
+width=357
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget OnionSkinsDocker]
 DockArea=8
 Locked=false
-height=368
-width=571
+height=282
+width=336
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget OverviewDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=108
+width=100
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget PaletteDocker]
-DockArea=1
+DockArea=2
 Locked=false
-height=222
-width=211
+height=463
+width=640
 xPosition=0
 yPosition=17
 
 [MainWindow][DockWidget PatternDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=246
+width=159
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget PresetDocker]
 DockArea=1
 Locked=false
-height=463
-width=640
+height=439
+width=544
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget PresetHistory]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=30
+width=100
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget RecorderDocker]
 DockArea=2
@@ -597,26 +628,26 @@ yPosition=17
 [MainWindow][DockWidget Snapshot]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=30
+width=100
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget SpecificColorSelector]
 DockArea=1
 Locked=false
-height=463
-width=640
+height=207
+width=268
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget StoryboardDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=561
+width=604
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget SvgSymbolCollectionDocker]
 DockArea=2
@@ -629,34 +660,42 @@ yPosition=17
 [MainWindow][DockWidget TasksetDocker]
 DockArea=2
 Locked=false
-height=463
-width=640
+height=300
+width=400
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget TimelineDocker]
 DockArea=8
 Locked=false
-height=448
-width=909
+height=50
+width=100
 xPosition=0
-yPosition=32
+yPosition=0
 
 [MainWindow][DockWidget ToolBox]
 DockArea=1
 Locked=false
-height=331
-width=211
+height=1007
+width=52
 xPosition=0
 yPosition=19
 
 [MainWindow][DockWidget TouchDocker]
 DockArea=2
 Locked=false
-height=463
+height=0
+width=0
+xPosition=0
+yPosition=0
+
+[MainWindow][DockWidget WideGamutColorSelector]
+DockArea=2
+Locked=false
+height=480
 width=640
 xPosition=0
-yPosition=17
+yPosition=0
 
 [MainWindow][DockWidget comics_project_manager_docker]
 DockArea=2
@@ -701,8 +740,8 @@ yPosition=17
 [MainWindow][DockWidget sharedtooldocker]
 DockArea=2
 Locked=false
-height=305
-width=261
+height=324
+width=337
 xPosition=0
 yPosition=17
 
@@ -711,51 +750,33 @@ pinControls=true
 
 [RecentFiles]
 File1[$e]=$HOME/Pictures/Background/8e1a6739d2804f340a539277090e2ede628c15a6a572e7f8d98742acc8046e8a.png
-File10[$e]=/mnt/MyFiles/Documents/Krita/2023-08-16-1111.kra
-File11[$e]=/mnt/MyFiles/Documents/Krita/2023-08-17-1111.kra
-File12[$e]=/mnt/MyFiles/Documents/Krita/2023-08-19-11111.kra
-File13[$e]=/mnt/MyFiles/Documents/Krita/2023-08-20-1111.kra
-File14[$e]=/mnt/MyFiles/Documents/Krita/2023-08-21-1111.kra
-File15[$e]=/mnt/MyFiles/Documents/Krita/2023-08-23-1111.kra
-File16[$e]=/mnt/MyFiles/Documents/Krita/2023-08-24-1111.kra
-File17[$e]=/mnt/SSData/Hydrus/db/client_files/f54/54731b82780993277e509d82ac53bf9a68776dcf02aff72415e5138f39b3576f.psd
-File18[$e]=/mnt/SSData/Hydrus/db/client_files/f66/66717b24ebf7700ac2433e9303f1bb6b2442ff95fd138b7ab4ec377c9d2643f2.psd
-File19[$e]=/mnt/SSData/Hydrus/db/client_files/fa5/a5b86697b2cb137d1b2fab0a0e5aa0883acf062d8d6269b789c9b456f2cac4db.psd
-File2[$e]=$HOME/Documents/rust/pixel-sort/target/release/output.jpg
-File20[$e]=/mnt/SSData/Hydrus/db/client_files/f4c/4c6a5619f7735bb8c429235fc279e7d7ace93daf5331247b1303b70e9cae3f04.psd
-File21[$e]=/mnt/MyFiles/Documents/Krita/2023-09-03-1111.kra
-File22[$e]=/mnt/MyFiles/Documents/Krita/2023-08-29-1111.kra
-File23[$e]=/mnt/MyFiles/Documents/Krita/2023-09-14-1111.kra
-File3[$e]=$HOME/Documents/rust/pixel-sort/target/release/input.jpg
-File4[$e]=$HOME/Documents/rust/pixel-sort/target/release/mask.png
-File5[$e]=$HOME/Documents/Jekyll/minnowo.github.io/favicon.png
-File6[$e]=$HOME/Downloads/nyaha.kra
-File7[$e]=/mnt/SSData/Hydrus/db/client_files/f9f/9f815214c9f2f2b93ff2a4a4b07f175798d90ab0a75d8aecffaf9bc3146b2139.png
-File8[$e]=/mnt/MyFiles/Documents/Krita/2023-08-13-1111.kra
-File9[$e]=/mnt/MyFiles/Documents/Krita/2023-08-15-1111.kra
+File10[$e]=/mnt/SSData/HydrusDev/hydrus/db/client_files/f21/21922f3b5aa4effa482f158fdcb830b5f8330efd5774a50ed1c70f8e25421511.kra
+File11[$e]=/mnt/MyFiles/School/Year03/Sem01/Probability_Theory/Assignments/assignment2.kra
+File12[$e]=/mnt/MyFiles/School/Year03/Sem01/Probability_Theory/Assignments/assignment1.kra
+File13[$e]=/mnt/MyFiles/Documents/Krita/2023-10-23-1111.kra
+File14[$e]=/mnt/MyFiles/School/Year03/Sem01/Analysis_and_algos/Study/Midterm1.kra
+File2[$e]=$HOME/Documents/Jekyll/minnowo.github.io/favicon.png
+File3[$e]=$HOME/Downloads/nyaha.kra
+File4[$e]=/mnt/SSData/Hydrus/db/client_files/f9f/9f815214c9f2f2b93ff2a4a4b07f175798d90ab0a75d8aecffaf9bc3146b2139.png
+File5[$e]=/mnt/SSData/Hydrus/db/client_files/f54/54731b82780993277e509d82ac53bf9a68776dcf02aff72415e5138f39b3576f.psd
+File6[$e]=/mnt/SSData/Hydrus/db/client_files/f66/66717b24ebf7700ac2433e9303f1bb6b2442ff95fd138b7ab4ec377c9d2643f2.psd
+File7[$e]=/mnt/SSData/Hydrus/db/client_files/fa5/a5b86697b2cb137d1b2fab0a0e5aa0883acf062d8d6269b789c9b456f2cac4db.psd
+File8[$e]=/mnt/SSData/Hydrus/db/client_files/f4c/4c6a5619f7735bb8c429235fc279e7d7ace93daf5331247b1303b70e9cae3f04.psd
+File9[$e]=$HOME/Documents/c_programming/imview/doko/test_images/huge.jpg
 Name1=8e1a6739d2804f340a539277090e2ede628c15a6a572e7f8d98742acc8046e8a.png
-Name10=2023-08-16-1111.kra
-Name11=2023-08-17-1111.kra
-Name12=2023-08-19-11111.kra
-Name13=2023-08-20-1111.kra
-Name14=2023-08-21-1111.kra
-Name15=2023-08-23-1111.kra
-Name16=2023-08-24-1111.kra
-Name17=54731b82780993277e509d82ac53bf9a68776dcf02aff72415e5138f39b3576f.psd
-Name18=66717b24ebf7700ac2433e9303f1bb6b2442ff95fd138b7ab4ec377c9d2643f2.psd
-Name19=a5b86697b2cb137d1b2fab0a0e5aa0883acf062d8d6269b789c9b456f2cac4db.psd
-Name2=output.jpg
-Name20=4c6a5619f7735bb8c429235fc279e7d7ace93daf5331247b1303b70e9cae3f04.psd
-Name21=2023-09-03-1111.kra
-Name22=2023-08-29-1111.kra
-Name23=2023-09-14-1111.kra
-Name3=input.jpg
-Name4=mask.png
-Name5=favicon.png
-Name6=nyaha.kra
-Name7=9f815214c9f2f2b93ff2a4a4b07f175798d90ab0a75d8aecffaf9bc3146b2139.png
-Name8=2023-08-13-1111.kra
-Name9=2023-08-15-1111.kra
+Name10=21922f3b5aa4effa482f158fdcb830b5f8330efd5774a50ed1c70f8e25421511.kra
+Name11=assignment2.kra
+Name12=assignment1.kra
+Name13=2023-10-23-1111.kra
+Name14=Midterm1.kra
+Name2=favicon.png
+Name3=nyaha.kra
+Name4=9f815214c9f2f2b93ff2a4a4b07f175798d90ab0a75d8aecffaf9bc3146b2139.png
+Name5=54731b82780993277e509d82ac53bf9a68776dcf02aff72415e5138f39b3576f.psd
+Name6=66717b24ebf7700ac2433e9303f1bb6b2442ff95fd138b7ab4ec377c9d2643f2.psd
+Name7=a5b86697b2cb137d1b2fab0a0e5aa0883acf062d8d6269b789c9b456f2cac4db.psd
+Name8=4c6a5619f7735bb8c429235fc279e7d7ace93daf5331247b1303b70e9cae3f04.psd
+Name9=huge.jpg
 maxRecentFileItems=100
 
 [SelectedTags]
@@ -773,12 +794,12 @@ workspaces=All
 currentCollection=0
 
 [SvgTextTool]
-Geometry=AdnQywADAAAAAADWAAACCgAABjgAAAOJAAAA1wAAAgsAAAY3AAADiAAAAAAAAAAACAAAAADXAAACCwAABjcAAAOI
+Geometry=AdnQywADAAAAAAHmAAADAwAAB0gAAASCAAAB5wAAAwQAAAdHAAAEgQAAAAAAAAAACAAAAAHnAAADBAAAB0cAAASB
 defaultAlignment=0
-defaultFont=DejaVu LGC Sans
+defaultFont=DejaVu Sans
 defaultLetterSpacing=0
 defaultSize=10
-windowState=AAAA/wAAAAD9AAAAAAAABWEAAADjAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAYAGYAbwBuAHQAUwBlAHQAdABpAG4AZwBzAQAAAAD/////AAAAAAAAAAAAAAACAAAAAQAAABQAZgBvAHIAbQBhAHQAdABpAG4AZwEAAAAA/////wAAAAAAAAAA
+windowState=AAAA/wAAAAD9AAAAAAAABWEAAADuAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAYAGYAbwBuAHQAUwBlAHQAdABpAG4AZwBzAQAAAAD/////AAAAAAAAAAAAAAACAAAAAQAAABQAZgBvAHIAbQBhAHQAdABpAG4AZwEAAAAA/////wAAAAAAAAAA
 
 [TemplateChooserDialog]
 LastReturnType=Custom Document
@@ -789,6 +810,7 @@ customSelectorBackgroundColor=160,160,164
 gamma=2.2
 lumaG=0.7152
 lumaR=0.2126
+minimalShadeSelectorLineConfig=0|0.2|0|0|0|0|0;1|0|1|1|0|0|0;2|0|-1|1|0|0|0
 showColorSelector=true
 useCustomColorForBackground=false
 
@@ -797,6 +819,9 @@ Last Used=<!DOCTYPE params>\n<params version="1">\n <param name="halfHeight" typ
 
 [burn_filter_bookmarks]
 Last Used=<!DOCTYPE params>\n<params version="0">\n <param type="internal" name="exposure">0.9</param>\n <param type="internal" name="type">1</param>\n</params>\n
+
+[colorbalance_filter_bookmarks]
+Last Used=<!DOCTYPE params>\n<params version="0">\n <param type="internal" name="cyan_red_highlights">0</param>\n <param type="internal" name="cyan_red_midtones">0</param>\n <param type="internal" name="cyan_red_shadows">0</param>\n <param type="internal" name="magenta_green_highlights">0</param>\n <param type="internal" name="magenta_green_midtones">0</param>\n <param type="internal" name="magenta_green_shadows">0</param>\n <param type="internal" name="preserve_luminosity">true</param>\n <param type="internal" name="yellow_blue_highlights">0</param>\n <param type="internal" name="yellow_blue_midtones">0</param>\n <param type="internal" name="yellow_blue_shadows">0</param>\n</params>\n
 
 [colortransfer_filter_bookmarks]
 Last Used=<!DOCTYPE params>\n<params version="1"/>\n
@@ -828,7 +853,7 @@ ColorSpaceExtensionsPlugins=\\0
 ColorSpaceExtensionsPluginsDisabled=
 ColorSpacePlugins=\\0
 ColorSpacePluginsDisabled=
-DockerPlugins=,,,,,,,,,,,,,,,,,,,,,,,,,,
+DockerPlugins=,,,,,,,,,,,,,,,,,,,,,,,,,,,
 DockerPluginsDisabled=
 FlakePlugins=\\0
 FlakePluginsDisabled=
@@ -852,7 +877,10 @@ qt_spinbox_lineedit=20
 Last Used=<!DOCTYPE params>\n<params version="1">\n <param type="internal" name="halfHeight">5</param>\n <param type="internal" name="halfWidth">5</param>\n <param type="internal" name="irisRadius">5</param>\n <param type="internal" name="irisRotation">0</param>\n <param type="string" name="irisShape"><![CDATA[Pentagon (5)]]></param>\n</params>\n
 
 [levels_filter_bookmarks]
-Last Used=<!DOCTYPE params>\n<params version="2">\n <param name="mode">lightness</param>\n <param name="histogram_mode">linear</param>\n <param name="lightness">0.261694058154235;0.733249051833123;2.91200685363768;0.543615676359039;1</param>\n <param name="number_of_channels">8</param>\n <param name="channel_0">0;1;1;0;1</param>\n <param name="channel_1">0;1;1;0;1</param>\n <param name="channel_2">0;1;1;0;1</param>\n <param name="channel_3">0;1;1;0;1</param>\n <param name="channel_4">0;1;1;0;1</param>\n <param name="channel_5">0;1;1;0;1</param>\n <param name="channel_6">0;1;1;0;1</param>\n <param name="channel_7">0;1;1;0;1</param>\n <param name="blackvalue" type="internal">67</param>\n <param name="whitevalue" type="internal">187</param>\n <param name="gammavalue" type="internal">2.91200685363768</param>\n <param name="outblackvalue" type="internal">139</param>\n <param name="outwhitevalue" type="internal">255</param>\n</params>\n
+Last Used=<!DOCTYPE params>\n<params version="2">\n <param name="mode">channels</param>\n <param name="histogram_mode">linear</param>\n <param name="lightness">0;1;1;0;1</param>\n <param name="number_of_channels">2</param>\n <param name="channel_0">0;1;5.26936004408321;0.401315789473684;0.28578947368421</param>\n <param name="channel_1">0;1;1;0;1</param>\n <param name="blackvalue" type="internal">0</param>\n <param name="whitevalue" type="internal">255</param>\n <param name="gammavalue" type="internal">1</param>\n <param name="outblackvalue" type="internal">0</param>\n <param name="outwhitevalue" type="internal">255</param>\n</params>\n
+
+[maximize_filter_bookmarks]
+Last Used=<!DOCTYPE params>\n<params version="1"/>\n
 
 [motion blur_filter_bookmarks]
 Last Used=<!DOCTYPE params>\n<params version="1">\n <param name="blurAngle" type="internal">305</param>\n <param name="blurLength" type="internal">13</param>\n</params>\n
