@@ -61,6 +61,12 @@ function install()        { update && sudo pacman -S "$1";         }
 function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq);      }
 function uninstall()      { doas pacman -R "$1" && remove_orphans; }
 
+function tldr_curl() {
+    for value in "$@"; do
+        curl "cheat.sh/$value"; 
+    done
+}
+
 function ffmpeg_hash() 
 { 
     for value in "$@"; do 
