@@ -48,10 +48,20 @@ if _cmd_exist 'fastfetch'; then
     alias neofetch='fastfetch'
 fi
 
+if _cmd_exist 'codium'; then
+    alias code='codium'
+    alias code.='codium .'
+    alias codium.='codium .'
+fi
+
 alias unmount-network='sudo umount -t cifs,nfs -a -l'
 alias mount-network='sudo mount -t cifs,nfs -a'
 
 alias find-local='nmap -n -sn 192.168.1.1/24'
+
+# https://github.com/alacritty/alacritty/issues/3962#issuecomment-862212371
+# helps ssh for older machines if you cannot install term info
+alias ssh-xterm='TERM=xterm-256color ssh'
 
 alias gpu="nvidia-smi -l 1"
 
@@ -61,13 +71,13 @@ function install()        { update && sudo pacman -S "$1";         }
 function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq);      }
 function uninstall()      { doas pacman -R "$1" && remove_orphans; }
 
-function tldr_curl() {
+function tldr-curl() {
     for value in "$@"; do
         curl "cheat.sh/$value"; 
     done
 }
 
-function ffmpeg_hash() 
+function ffmpeg-hash() 
 { 
     for value in "$@"; do 
 
@@ -93,6 +103,57 @@ function lfcd () {
             fi
         fi
     fi
+}
+
+
+function close_luks(){
+    NAME=$1
+    NAME_PATH=$2
+
+    if [ $# -ne 2 ]; then
+        echo "Must supply <name> <path> to unmount and close"
+        return 0
+    fi
+
+    sudo umount $NAME_PATH
+
+    sudo cryptsetup close $NAME
+
+    sudo rmdir $NAME_PATH
+}
+
+function open_luks() { 
+    FILE=$1
+    NAME=$2
+    MOUNT_ON=$3
+
+    if [ $# -lt 3 ]; then
+        echo "You must give arguments <file-path> <mount-name> <mount-folder>"
+        return 0
+    fi
+
+    if [ ! -f $FILE ]; then
+        echo "File: [$FILE] does not exist."
+        return 0
+    fi
+
+    if [[ ! "$NAME" =~ ^[a-zA-Z0-9_]+$ ]]; then
+        echo "Name [$NAME] contains characters other than a-z A-Z 0-9 or _"
+        return 0
+    fi
+
+    echo "Attempting to mount $FILE as $NAME"
+
+    sudo cryptsetup open --type luks $FILE $NAME
+
+    if [ $? -ne 0 ]; then
+        echo "Error while mounting volumn"
+        return 0
+    fi
+
+    sudo mkdir -p $MOUNT_ON
+
+    sudo mount /dev/mapper/$NAME $MOUNT_ON
 }
 
 # PATH FOR COLORS
