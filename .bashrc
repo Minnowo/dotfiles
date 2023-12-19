@@ -54,6 +54,8 @@ if _cmd_exist 'codium'; then
     alias codium.='codium .'
 fi
 
+alias lgit="lazygit"
+
 alias unmount-network='sudo umount -t cifs,nfs -a -l'
 alias mount-network='sudo mount -t cifs,nfs -a'
 
@@ -70,6 +72,15 @@ alias update="sudo pacman -Syu"
 function install()        { update && sudo pacman -S "$1";         }
 function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq);      }
 function uninstall()      { doas pacman -R "$1" && remove_orphans; }
+
+function update-mirrors(){ 
+    sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+    sudo reflector --verbose \
+        --latest 10 \
+        --protocol https \
+        --sort rate \
+        --save /etc/pacman.d/mirrorlist
+}
 
 function tldr-curl() {
     for value in "$@"; do
@@ -106,7 +117,7 @@ function lfcd () {
 }
 
 
-function close_luks(){
+function close-luks(){
     NAME=$1
     NAME_PATH=$2
 
@@ -122,7 +133,7 @@ function close_luks(){
     sudo rmdir $NAME_PATH
 }
 
-function open_luks() { 
+function open-luks() { 
     FILE=$1
     NAME=$2
     MOUNT_ON=$3
@@ -183,23 +194,9 @@ export LS_COLORS="${LS_COLORS}*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*
 
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
 
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
 
 neofetch
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$PATH:/opt/miniconda3/bin"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-. "$HOME/.cargo/env"

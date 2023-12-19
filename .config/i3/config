@@ -184,6 +184,9 @@ exec --no-startup-id nm-applet
 # notification service
 exec --no-startup-id dunst
 
+# graphical polkit agent
+exec --no-startup-id /usr/bin/lxpolkit
+
 # bar service
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh 
 

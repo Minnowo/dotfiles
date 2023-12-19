@@ -48,8 +48,8 @@ Krita/Ocio/OcioConfigPath=
 Krita/Ocio/OcioLockColorVisualRepresentation=false
 Krita/Ocio/OcioLutPath=
 Krita/Ocio/UseOcio=false
-LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB space="sRGB-elle-V2-srgbtrc.icc" b="0.819607853889465" g="0.819607853889465" r="0.819607853889465"/>\n</LastBackGroundColor>\n
-LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB space="sRGB-elle-V2-srgbtrc.icc" b="0" g="0" r="0"/>\n</LastForeGroundColor>\n
+LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB space="sRGB-elle-V2-srgbtrc.icc" r="0.819607853889465" b="0.819607853889465" g="0.819607853889465"/>\n</LastBackGroundColor>\n
+LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB space="sRGB-elle-V2-srgbtrc.icc" r="0" b="0" g="0"/>\n</LastForeGroundColor>\n
 LastPreset=d) Ink-2 Fineliner
 LastPreset_-1=d) Ink-2 Fineliner
 LineSmoothingDelayDistance=1
@@ -71,6 +71,7 @@ ShowOutlineWhilePainting=true
 ShowRootLayer=false
 SmoothZooming=false
 SpecificColorSelector/HsxMode=0
+SpecificColorSelector/UseHsx=false
 SpecificColorSelector/UsePercentage=false
 ToolOptionsInDocker=true
 TrimFramesImport=false
@@ -162,9 +163,9 @@ hideScrollbarsFullScreen=true
 hideStatusbarFullScreen=true
 hideTitleBarFullscreen=true
 hideToolbarFullscreen=true
-imageHeightDef=222
+imageHeightDef=1000
 imageResolutionDef=300
-imageWidthDef=227
+imageWidthDef=1000
 imagesizedlg_imsizeunit=px
 imagesizedlg_printSizeSeparatly=false
 imagesizedlg_ratioLock=true
@@ -260,7 +261,7 @@ popuppalette/showRotationTrack=true
 popuppalette/size=400
 popuppalette/useDynamicSlotCount=true
 popuppalette/usevisualcolorselector=false
-presethistory=d) Ink-2 Fineliner,Nachowo,i) Wet Paint,Layout pen SOLID,a) Eraser Circle,d) Ink-1 Precision,b1) Airbrush - deevad 23.01,c) Pencil-2,Line Inart,b) Nacho-Pen
+presethistory=d) Ink-2 Fineliner,i) Wet Paint,a) Eraser Circle,d) Ink-1 Precision,c) Pencil-2
 recorder/captureinterval=1
 recorder/format=0
 recorder/recordautomatically=true
@@ -777,7 +778,7 @@ maxRecentFileItems=100
 brushes=All
 gamutmasks=All
 gradients=All
-paintoppresets=Ink
+paintoppresets=All
 palettes=All
 patterns=All
 tasksets=All
@@ -796,7 +797,7 @@ defaultSize=10
 windowState=AAAA/wAAAAD9AAAAAAAABWEAAADuAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAYAGYAbwBuAHQAUwBlAHQAdABpAG4AZwBzAQAAAAD/////AAAAAAAAAAAAAAACAAAAAQAAABQAZgBvAHIAbQBhAHQAdABpAG4AZwEAAAAA/////wAAAAAAAAAA
 
 [TemplateChooserDialog]
-LastReturnType=Create from ClipBoard
+LastReturnType=Custom Document
 
 [advancedColorSelector]
 colorSelectorConfiguration=1|4|6|0

@@ -14,6 +14,9 @@ export XDG_SESSION_TYPE=x11
 export GTK_USE_PORTAL=1
 
 # monitor setup
+/usr/bin/prime-offload
+# xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --output HDMI-0 --left-of eDP-1-1
+xrandr --output HDMI-0 --primary
 

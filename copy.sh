@@ -10,6 +10,11 @@ rsync -aivr --delete --progress \
 rsync -aivr --delete --progress \
    ~/.config/alacritty ./.config/
 
+rsync -aivr --delete --progress \
+   ~/.config/fastfetch ./.config/
+
+rsync -aivr --delete --progress \
+   ~/.config/lazygit ./.config/
 
 rsync -aivr --delete --progress \
    ~/.config/htop ./.config/
