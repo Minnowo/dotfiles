@@ -67,6 +67,8 @@ alias ssh-xterm='TERM=xterm-256color ssh'
 
 alias gpu="nvidia-smi -l 1"
 
+alias tablet="systemctl --user restart opentabletdriver.service"
+
 alias update="sudo pacman -Syu"
 
 function install()        { update && sudo pacman -S "$1";         }
