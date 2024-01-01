@@ -1,0 +1,102 @@
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "0x6e6a86"
+blue = "0x9ccfd8"
+cyan = "0xebbcba"
+green = "0x31748f"
+magenta = "0xc4a7e7"
+red = "0xeb6f92"
+white = "0xe0def4"
+yellow = "0xf6c177"
+
+[colors.cursor]
+cursor = "0x524f67"
+text = "0xe0def4"
+
+[colors.hints.end]
+background = "#1f1d2e"
+foreground = "#6e6a86"
+
+[colors.hints.start]
+background = "#1f1d2e"
+foreground = "#908caa"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.normal]
+black = "0x26233a"
+blue = "0x9ccfd8"
+cyan = "0xebbcba"
+green = "0x31748f"
+magenta = "0xc4a7e7"
+red = "0xeb6f92"
+white = "0xe0def4"
+yellow = "0xf6c177"
+
+[colors.primary]
+background = "0x191724"
+foreground = "0xe0def4"
+
+[colors.selection]
+background = "0x403d52"
+text = "0xe0def4"
+
+[colors.vi_mode_cursor]
+cursor = "0x524f67"
+text = "0xe0def4"
+
+[cursor]
+style = "Block"
+
+[font]
+size = 12.0
+
+[[hints.enabled]]
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.command]
+args = []
+program = "/home/minno/.config/alacritty/scripts/copy_link.sh"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "K"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "J"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "J"
+mods = "Control|Shift"
+
+[window]
+opacity = 1.0
