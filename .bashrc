@@ -72,8 +72,8 @@ alias tablet="systemctl --user restart opentabletdriver.service"
 alias update="sudo pacman -Syu"
 
 function install()        { update && sudo pacman -S "$1";         }
-function remove_orphans() { doas pacman -Rsn $(pacman -Qdtq);      }
-function uninstall()      { doas pacman -R "$1" && remove_orphans; }
+function remove_orphans() { sudo pacman -Rsn $(pacman -Qdtq);      }
+function uninstall()      { sudo pacman -R "$1" && remove_orphans; }
 
 function update-mirrors(){ 
     sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
@@ -167,6 +167,44 @@ function open-luks() {
     sudo mkdir -p $MOUNT_ON
 
     sudo mount /dev/mapper/$NAME $MOUNT_ON
+}
+
+
+function find-truenas() {
+
+    ips=$(nmap -n -sn 192.168.1.1/24 | grep -E -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}")
+
+    echo "$ips" | while IFS= read -r ip; do
+
+        echo "Searching: $ip"
+
+        if curl -s -k -L "$ip" | grep -o -F "TrueNAS" >/dev/null; then
+
+            echo "TrueNAS: $ip"
+
+            echo "Updating hosts file..."
+
+            to_add="$ip truenas.local"
+
+            sudo sed -i -E "s/\b([0-9]{1,3}\.){3}[0-9]{1,3}[ ]*truenas\.local\b/$to_add/" /etc/hosts || true
+
+            if ! grep "truenas\.local" /etc/hosts; then
+
+                echo "$to_add" | sudo tee -a /etc/hosts
+
+                echo "Appending to hosts file..."
+
+             fi
+
+            echo "Done!"
+
+            return 0
+
+        fi
+
+    done
+
+    return 1
 }
 
 # PATH FOR COLORS
