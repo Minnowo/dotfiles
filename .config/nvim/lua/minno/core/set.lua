@@ -40,3 +40,11 @@ vim.o.scrolloff = 999
 vim.o.completeopt = 'menuone,noselect'
 
 vim.o.termguicolors = true
+
+
+-- change cursor color
+vim.opt.guicursor = 'n-v-c:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20-Cursor'
+vim.api.nvim_set_hl(0, "Cursor", {fg='#cc9900', bg='#339966'})
+vim.api.nvim_set_hl(0, "CursorReset", {fg='white', bg='white'})
+
+

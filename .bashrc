@@ -11,7 +11,8 @@ bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 # PATH
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export GTK_USE_PORTAL=1
 export VISUAL=nvim
 export IM4JAVA_TOOLPATH="/bin/"
