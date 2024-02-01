@@ -8,6 +8,9 @@ rsync -aivr --delete --progress \
 
 
 rsync -aivr --delete --progress \
+   ~/.config/pcmanfm ./.config/
+
+rsync -aivr --delete --progress \
    ~/.config/alacritty ./.config/
 
 rsync -aivr --delete --progress \
