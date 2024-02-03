@@ -8,56 +8,57 @@ rsync -aivr --delete --progress \
 
 
 rsync -aivr --delete --progress \
-   ~/.config/pcmanfm ./.config/
+    ~/.config/pcmanfm ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/alacritty ./.config/
+    ~/.config/alacritty ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/fastfetch ./.config/
+    ~/.config/fastfetch ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/lazygit ./.config/
+    ~/.config/lazygit ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/htop ./.config/
+    ~/.config/htop ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/lsd ./.config/
+    ~/.config/lsd ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/kritarc ./.config/
+    ~/.config/kritarc ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/kritashortcutsrc ./.config/
+    ~/.config/kritashortcutsrc ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/i3 ./.config/
+    ~/.config/i3 ./.config/
 
 rsync -aivr --delete --progress \
-   --exclude "forest" \
-   ~/.config/polybar ./.config/
+    --exclude "forest" \
+    ~/.config/polybar ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/neofetch ./.config/
+    ~/.config/neofetch ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/lf ./.config/
+    ~/.config/lf ./.config/
 
 rsync -aivr --delete --progress \
-   ~/.config/nvim ./.config/
+    ~/.config/nvim ./.config/
 
 rsync -aivr --delete --progress \
-   --exclude "command-history" \
-   --exclude "search-history" \
-   --exclude "cache" \
-   --exclude "lib.pl" \
-   --exclude "playlists" \
-   ~/.config/cmus ./.config/
+    --exclude "command-history" \
+    --exclude "search-history" \
+    --exclude "cache" \
+    --exclude "lib.pl" \
+    --exclude "playlists" \
+    ~/.config/cmus ./.config/
 
 yes | cp -rf ~/.bashrc ./.bashrc || true
 yes | cp -rf ~/.inputrc ./.inputrc || true
 yes | cp -rf ~/.vimrc ./.vimrc  || true
 yes | cp -rf ~/.xprofile ./.xprofile  || true
 yes | cp -rf ~/.xinitrc ./.xinitrc  || true
+yes | cp -rf ~/.tmux.conf ./.tmux.conf  || true
 
