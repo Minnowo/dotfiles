@@ -37,8 +37,10 @@ return {
                 "dockerfile",
                 "gitignore",
                 "go",
+                "templ",
                 "rust",
                 "c",
+                "kotlin",
             },
 
             -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
@@ -47,6 +49,12 @@ return {
             -- Instead of true it can also be a list of languages
             additional_vim_regex_highlighting = false,
 
+        })
+
+        vim.filetype.add({
+            extension = {
+                templ = "templ",
+            },
         })
 
     end,
