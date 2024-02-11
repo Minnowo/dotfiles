@@ -4,6 +4,7 @@ return {
     config = function()
         local nvimtree = require("nvim-tree")
         local api = require("nvim-tree.api")
+        local lib = require("nvim-tree.lib")
 
         -- recommended settings from nvim-tree documentation
         vim.g.loaded_netrw = 1
@@ -94,6 +95,12 @@ return {
                 vim.keymap.set('n', 'K',       api.node.navigate.sibling.first,     opts('First Sibling'))
                 vim.keymap.set('n', 'q',       api.tree.close,                      opts('Close'))
                 vim.keymap.set('n', '<2-LeftMouse>',  api.node.open.edit,           opts('Open'))
+
+                vim.keymap.set('n', '<leader>mpv',
+                    function()
+                        vim.cmd("!mpv " .. vim.fn.shellescape(lib.get_node_at_cursor().absolute_path))
+                    end,           opts('Open the file under cursor with MPV')
+                )
             end
         })
 
