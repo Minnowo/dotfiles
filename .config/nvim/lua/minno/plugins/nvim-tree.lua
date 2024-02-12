@@ -104,6 +104,13 @@ return {
             end
         })
 
+        vim.cmd [[
+        :hi link NvimTreeExecFile Title 
+        :hi link NvimTreeSpecialFile NvimTreeNormal 
+        :hi link NvimTreeImageFile NvimTreeNormal 
+        :hi link NvimTreeSymlink NvimTreeSpecialFile 
+        ]]
+
         -- set keymaps
         local keymap = vim.keymap -- for conciseness
 
