@@ -17,15 +17,25 @@ args=(
     fd        # regex search
     git-delta # diff tool
     lazygit   # git tui
+    bat       # better cat
     npm     
+    docker
+    docker-compoase
 
     # gui stuff
-    keepassxc # password manager
-    flameshot # screenshot utility
-    pcmanfm   # minimal fast file manager
-    timeshift # file system snapshots
-    alacritty # terminal
-    polybar   # bar for i3
+    keepassxc  # password manager
+    flameshot  # screenshot utility
+    pcmanfm    # minimal fast file manager
+    timeshift  # file system snapshots
+    alacritty  # terminal
+    polybar    # bar for i3
+    obs-studio # screen capture
+    xarchiver  # archive manager
+
+    # see https://archsetup.blogspot.com/2023/11/install-windows-11-on-virt-manager.html
+    # for a in-depth guide
+    virt-manager
+    qemu-full
 
     ttf-jetbrains-mono-nerd
 
