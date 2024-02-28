@@ -6,8 +6,8 @@
 # Possible values: permission, user, group, context, size, date, name, inode, links
 blocks:
   - permission
-#  - user
-#  - group
+  - user
+  - group
   - date
   - size
   - name

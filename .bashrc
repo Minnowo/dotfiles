@@ -179,7 +179,7 @@ function find-truenas() {
 
         echo "Searching: $ip"
 
-        if curl -s -k -L "$ip" | grep -o -F "TrueNAS" >/dev/null; then
+        if curl -s -k -L "$ip" | grep -o -F "main-page-title" >/dev/null; then
 
             echo "TrueNAS: $ip"
 
@@ -241,5 +241,9 @@ export LS_COLORS="${LS_COLORS}*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #     exec tmux
 # fi
+
+
+eval "$(zoxide init --cmd cd bash)"
+
 
 

@@ -61,7 +61,7 @@ return {
         -- used to enable autocompletion (assign to every lsp server config)
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
-        local lsps = { "html", "cssls", "clangd", "gopls", "templ", "kotlin_language_server"}
+        local lsps = { "html", "cssls", "clangd", "gopls", "templ", "jdtls" }
 
         for _, x in pairs(lsps) do
 
