@@ -53,3 +53,7 @@ opts.desc = "Run selected lua code and open output in new buffer"
 vim.keymap.set("v", "<C-S-x>", [[<esc>:'<,'>w !lua >/tmp/out.txt<CR> :vsp /tmp/out.txt<CR>]], opts)
 
 
+function Format()
+    vim.lsp.buf.format()
+end
+

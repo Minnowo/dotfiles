@@ -55,6 +55,14 @@ if _cmd_exist 'codium'; then
     alias codium.='codium .'
 fi
 
+# https://archlinux.org/news/deprecation-of-net-tools/
+alias ifconfig="ip addr"
+alias ipconfig="ip addr"
+
+alias c="cd"
+alias cd.="cd ."
+alias cd..="cd .."
+
 alias lgit="lazygit"
 
 alias unmount-network='sudo umount -t cifs,nfs -a -l'
