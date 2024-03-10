@@ -72,6 +72,13 @@ return {
 
         end
 
+        lspconfig["tailwindcss"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+            init_options = { userLanguages = { templ = "html" } },
+        })
+
         lspconfig["gopls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
