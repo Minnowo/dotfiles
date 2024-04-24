@@ -144,7 +144,6 @@ bindsym $mod+Control+l move workspace to output right
 bindsym $mod+Control+h move workspace to output left
 
 
-
 bindsym $mod+r mode "resize"
 
 mode "resize" {

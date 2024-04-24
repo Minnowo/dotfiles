@@ -1,5 +1,3 @@
-
-
 local opts = {}
 
 vim.g.mapleader = ' '
@@ -7,7 +5,7 @@ vim.g.maplocalleader = ' '
 
 
 -- for ctrl+backspace to delete word
-vim.keymap.set("i", "<C-h>", "<C-w>") -- works in alacritty
+vim.keymap.set("i", "<C-h>", "<C-w>")  -- works in alacritty
 vim.keymap.set("i", "<C-BS>", "<C-w>") -- works in kitty
 
 -- for ctrl+del to delete word
@@ -52,8 +50,6 @@ vim.keymap.set("v", "<C-x>", [[<esc>:'<,'>:w !lua<CR>]], opts)
 opts.desc = "Run selected lua code and open output in new buffer"
 vim.keymap.set("v", "<C-S-x>", [[<esc>:'<,'>w !lua >/tmp/out.txt<CR> :vsp /tmp/out.txt<CR>]], opts)
 
+vim.api.nvim_create_user_command("Format", vim.lsp.buf.format, {})
 
-function Format()
-    vim.lsp.buf.format()
-end
 

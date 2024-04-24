@@ -61,7 +61,7 @@ return {
         -- used to enable autocompletion (assign to every lsp server config)
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
-        local lsps = { "html", "cssls", "clangd", "gopls", "templ", "jdtls" }
+        local lsps = { "html", "cssls", "clangd", "gopls", "templ", "eslint", "jedi_language_server"}
 
         for _, x in pairs(lsps) do
 
@@ -71,6 +71,13 @@ return {
             })
 
         end
+
+        lspconfig["jdtls"].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            filetypes = { "java" },
+            init_options = {}
+        })
 
         lspconfig["tailwindcss"].setup({
             on_attach = on_attach,
