@@ -21,6 +21,5 @@ return {
         ft.set('reimu', {'//%s', '/*%s*/'})
         vim.cmd([[ autocmd FileType reimu setlocal commentstring=//\ %s ]])
 
-
     end
 }

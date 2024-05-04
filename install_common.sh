@@ -53,6 +53,9 @@ args=(
 sudo pacman -S "${args[@]}"
 
 
+# make pcmanfm open directories
+xdg-mime default pcmanfm.desktop inode/directory
+
 args=(
     brave-bin
     osu-lazer-bin

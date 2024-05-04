@@ -16,33 +16,49 @@ return {
                 enable = true,
             },
 
-            indent = { 
-                enable = true 
+            indent = {
+                enable = true
             },
 
             -- ensure these language parsers are installed
             ensure_installed = {
                 "json",
+                "json5",
                 "javascript",
                 "typescript",
                 "yaml",
                 "toml",
+                "xml",
                 "html",
                 "css",
+                "sql",
                 "markdown",
                 "markdown_inline",
                 "bash",
                 "lua",
+                "luadoc",
                 "vim",
                 "dockerfile",
                 "gitignore",
+                "git_config",
+                "git_rebase",
+                "gitattributes",
+                "gitcommit",
+                "ssh_config",
                 "go",
+                "gpg",
+                "gomod",
+                "gosum",
+                "gotmpl",
                 "templ",
                 "rust",
                 "c",
+                "cmake",
+                "cpp",
                 "kotlin",
                 "java",
                 "python",
+                "ini",
             },
 
             -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

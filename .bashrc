@@ -57,6 +57,7 @@ if _cmd_exist 'eclipse'; then
     alias eclipse='__NV_PRIME_RENDER_OFFLOAD=1 eclipse'
 fi
 
+
 # https://archlinux.org/news/deprecation-of-net-tools/
 alias ifconfig="ip addr"
 alias ipconfig="ip addr"
@@ -85,6 +86,11 @@ alias update="sudo pacman -Syu"
 function install()        { update && sudo pacman -S "$1";         }
 function remove_orphans() { sudo pacman -Rsn $(pacman -Qdtq);      }
 function uninstall()      { sudo pacman -R "$1" && remove_orphans; }
+
+function set-open-folder() { 
+    # this took me so long to figure out
+    xdg-mime default pcmanfm.desktop inode/directory
+}
 
 function update-mirrors(){ 
     sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
