@@ -36,7 +36,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # mic toggle
-bindsym $mod+m exec --no-startup-id ~/.config/i3/scripts/mutemic.sh
+# bindsym $mod+m exec --no-startup-id ~/.config/i3/scripts/mutemic.sh
 
 
 # start a terminal
@@ -44,6 +44,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 
 # screenshot program
 bindsym --release $alt+z exec --no-startup-id flameshot gui
+bindsym --release $alt+x exec --no-startup-id ~/.config/i3/scripts/zoomer.sh
 
 # kill focused window
 bindsym $mod+q kill
@@ -215,8 +216,8 @@ for_window [title="Doko*"] floating disable
 ################################################################
 
 
-# default colors
-# class                 border  backgr. text    indicator child_border
+# # default colors
+# # class                 border  backgr. text    indicator child_border
 # client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 # client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 # client.unfocused        #333333 #222222 #888888 #292d2e   #222222
@@ -225,12 +226,38 @@ for_window [title="Doko*"] floating disable
 
 # client.background       #ffffff
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #e0def4 #e0def4 #26233a #e0def4   #e0def4
+# # my usualy colors
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #e0def4 #e0def4 #26233a #e0def4   #e0def4
 
 
+# # testing out vscode colors
+set_from_resource $color0      i3wm.color0      #1f1f1f
+set_from_resource $color1      i3wm.color1      #f44747
+set_from_resource $color2      i3wm.color2      #608b4e
+set_from_resource $color3      i3wm.color3      #dcdcaa
+set_from_resource $color4      i3wm.color4      #569cd6
+set_from_resource $color5      i3wm.color5      #c678dd
+set_from_resource $color6      i3wm.color6      #56b6c2
+set_from_resource $color7      i3wm.color7      #d4d4d4
+set_from_resource $color8      i3wm.color8      #808080
+set_from_resource $color9      i3wm.color9      #f44747
+set_from_resource $color10     i3wm.color10     #608b4e
+set_from_resource $color11     i3wm.color11     #dcdcaa
+set_from_resource $color12     i3wm.color12     #569cd6
+set_from_resource $color13     i3wm.color13     #c678dd
+set_from_resource $color14     i3wm.color14     #56b6c2
+set_from_resource $color15     i3wm.color15     #d4d4d4
+set_from_resource $foreground  i3wm.foreground  #d4d4d4
+set_from_resource $background  i3wm.background  #1f1f1f
+set_from_resource $cursorColor i3wm.cursorColor #d4d4d4
 
+# # class                border  backgr  text    indicator child_border
+client.focused           $color7 $color7 $color0 $color7   $color7
+client.focused_inactive  $color8 $color8 $color0 $color8   $color8
+client.unfocused         $color8 $color0 $color8 $color8   $color8
+client.urgent            $color3 $color0 $color3 $color8   $color8
+client.placeholder       $color6 $color0 $color6 $color6   $color8
 
-
-
+client.background $color6
 

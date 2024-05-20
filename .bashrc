@@ -138,23 +138,13 @@ function lfcd () {
 # requires https://github.com/Minnowo/tuip
 function cdt() {
 
-    files=()
-    files+=(..) # always include parent dir first
-
     # makes */ not appear in the arrays
     shopt -s nullglob
 
-    # hidden directories
-    for i in .*/; do
-
-        files+=("$i")
-    done
-
-    # other directories
-    for i in */; do
-
-        files+=("$i")
-    done
+    files=()
+    files+=(..)  # always include parent dir first
+    files+=(.*/) # hidden dirs
+    files+=(*/)  # other dirs
 
     shopt -u nullglob
 
@@ -176,6 +166,7 @@ function cdt() {
 
     fi
 }
+
 
 
 function close-luks(){
@@ -296,7 +287,7 @@ export LS_COLORS="${LS_COLORS}*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*
 
 # pretty stuff 
 bind 'set show-all-if-ambiguous on'
-# bind 'set colored-stats on' 2>/dev/null
+bind 'set colored-stats on' 2>/dev/null
 
 # hides ^c when pressing it in terminal
 bind 'set echo-control-characters off '
