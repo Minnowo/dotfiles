@@ -15,6 +15,17 @@ return {
             -- enable syntax highlighting
             highlight = {
                 enable = true,
+
+                disable = function(lang, buf)
+
+                    local max_filesize = 5 * 1024 * 1024 -- 5mb
+
+                    local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+
+                    if ok and stats and stats.size > max_filesize then
+                        return true
+                    end
+                end,
             },
 
             indent = {
@@ -70,41 +81,41 @@ return {
 
         })
 
-        vim.filetype.add({
-            extension = {
-                templ = "templ",
-            },
-        })
-
-
-        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-
-        parser_config.reimu = {
-            install_info = {
-                -- local path or git repo
-                url = "/home/minno/Sync/General/Compilers/Assignments/final/reimu/tree_sitter",
-                -- note that some parsers also require src/scanner.c or src/scanner.cc
-                files = {"src/parser.c"},
-                --
-                -- optional entries:
-                --
-                -- default branch in case of git repo if different from master
-                branch = "main",
-                -- if stand-alone parser without npm dependencies
-                generate_requires_npm = false,
-                -- if folder contains pre-generated src/parser.c
-                requires_generate_from_grammar = false,
-            },
-
-            -- if filetype does not match the parser name
-            filetype = "rei",
-        }
-
-        -- you can register the file type with neovim here
-        vim.filetype.add({
-            extension = {
-                rei = "reimu",
-            },
-        })
+        --        vim.filetype.add({
+        --            extension = {
+        --                templ = "templ",
+        --            },
+        --        })
+        --
+        --
+        --        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+        --
+        --        parser_config.reimu = {
+        --            install_info = {
+        --                -- local path or git repo
+        --                url = "/home/minno/Sync/General/Compilers/Assignments/final/reimu/tree_sitter",
+        --                -- note that some parsers also require src/scanner.c or src/scanner.cc
+        --                files = {"src/parser.c"},
+        --                --
+        --                -- optional entries:
+        --                --
+        --                -- default branch in case of git repo if different from master
+        --                branch = "main",
+        --                -- if stand-alone parser without npm dependencies
+        --                generate_requires_npm = false,
+        --                -- if folder contains pre-generated src/parser.c
+        --                requires_generate_from_grammar = false,
+        --            },
+        --
+        --            -- if filetype does not match the parser name
+        --            filetype = "rei",
+        --        }
+        --
+        --        -- you can register the file type with neovim here
+        --        vim.filetype.add({
+        --            extension = {
+        --                rei = "reimu",
+        --            },
+        --        })
     end,
 }

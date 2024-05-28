@@ -191,7 +191,7 @@ exec --no-startup-id /usr/bin/lxpolkit
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh 
 
 # set key repeat faster
-exec_always --no-startup-id xset r rate 300 32 && notify-send -t 1500 "Key Repeat Set"
+exec_always --no-startup-id xset r rate 225 32 && notify-send -t 1500 "Key Repeat Set"
 
 # disable mouse accel for all pointers 
 exec_always --no-startup-id for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1 && notify-send -t 1500 "Mouse accleration off for pointer: ${id}"; done
