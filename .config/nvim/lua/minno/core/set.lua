@@ -41,6 +41,16 @@ vim.o.completeopt = 'menuone,noselect'
 
 vim.o.termguicolors = true
 
+vim.opt.listchars = {
+    space = '.',
+    leadmultispace = '|...',
+    tab = '-->',
+    extends = '⟩',
+    precedes = '⟨',
+    trail = '·',
+    -- eol = '$'
+}
+vim.o.list = true
 
 -- change cursor color
 vim.opt.guicursor = 'n-v-c:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20-Cursor'

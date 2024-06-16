@@ -208,7 +208,7 @@ exec_always --no-startup-id sleep 1 && feh --bg-fill --randomize "$HOME/Pictures
 
 
 for_window [title="review files to import*"] floating enable
-for_window [title="Doko*"] floating disable
+for_window [title="Immy*"] floating disable
 
 
 ################################################################
