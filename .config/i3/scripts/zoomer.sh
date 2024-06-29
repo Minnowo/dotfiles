@@ -16,8 +16,8 @@ PICTURE=/tmp/immy_screen.bmp
 # -Z 1   if png; pretty fast and fair enough compression
 scrot -z -o -q 100 -Z 1 "$PICTURE"
 
-# run doko so that it covers all monitors and starts at 0 0
-immy -x 0 -y 0 -w "$width" -h "$height" -D -C -B -t "$PICTURE" "$PICTURE" 
+# run immy so that it covers all monitors and starts at 0 0
+immy -x 0 -y 0 -w "$width" -h "$height" -d -C -B -t "$PICTURE" "$PICTURE" 
 
 # delete the image
 rm "$PICTURE"
