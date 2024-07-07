@@ -21,11 +21,15 @@ fi
 # HELPER FUNCTIONS
 function _cmd_exist() { type "$1" > /dev/null 2>&1; }
 
-alias ls='ls --color=always --group-directories-first'
+alias ls='ls --color=auto --group-directories-first --classify'
+alias la='ls -a'
+alias df='df -h --output=source,target,size,used,avail,pcent'
+alias du='du -h'
 
 # ALIAS & COMMANDS
 if _cmd_exist 'lsd'; then
-    alias ls='lsd'
+    alias ls='lsd --color=auto --group-directories-first --classify'
+    alias la='lsd -a'
 fi
 
 if _cmd_exist 'bat'; then
@@ -328,7 +332,9 @@ bind '"\e[B": history-search-forward'
 # fi
 
 
-eval "$(zoxide init --cmd cd bash)"
+if _cmd_exist "zoxide"; then
+    eval "$(zoxide init --cmd cd bash)"
+fi
 
 
 
