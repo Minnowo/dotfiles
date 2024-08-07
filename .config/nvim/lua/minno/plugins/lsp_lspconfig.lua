@@ -61,7 +61,7 @@ return {
         -- used to enable autocompletion (assign to every lsp server config)
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
-        local lsps = { "html", "cssls", "clangd", "gopls", "templ", "eslint", "jedi_language_server", "hls"}
+        local lsps = { "html", "clangd", "gopls", "templ", "jedi_language_server"}
 
         for _, x in pairs(lsps) do
 
@@ -72,11 +72,140 @@ return {
 
         end
 
+        lspconfig["jsonls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                json = {
+                    schemas = {
+                        {
+                            fileMatch = { "package.json" },
+                            url = "https://json.schemastore.org/package.json"
+                        },
+                        {
+                            fileMatch = { "tsconfig*.json" },
+                            url = "https://json.schemastore.org/tsconfig.json"
+                        },
+                        {
+                            fileMatch = { ".prettierrc", ".prettierrc.json", "prettier.config.json" },
+                            url = "https://json.schemastore.org/prettierrc.json"
+                        },
+                        {
+                            fileMatch = { ".eslintrc", ".eslintrc.json" },
+                            url = "https://json.schemastore.org/eslintrc.json"
+                        },
+                        {
+                            fileMatch = { ".babelrc", ".babelrc.json", "babel.config.json" },
+                            url = "https://json.schemastore.org/babelrc.json"
+                        },
+                        {
+                            fileMatch = { "lerna.json" },
+                            url = "https://json.schemastore.org/lerna.json"
+                        },
+                        {
+                            fileMatch = { "now.json", "vercel.json" },
+                            url = "https://json.schemastore.org/now.json"
+                        },
+                        {
+                            fileMatch = { "ecosystem.json" },
+                            url = "https://json.schemastore.org/pm2-ecosystem.json"
+                        },
+                    }
+                }
+            }
+        })
+
+        lspconfig["cssls"].setup({
+            on_attach = function(client, bufnr)
+                client.server_capabilities.documentFormattingProvider = true
+                client.server_capabilities.documentRangeFormattingProvider = true
+                on_attach(client, bufnr)
+            end,
+            capabilities = capabilities,
+            settings = {
+                css = {
+                    lint = {
+                        unknownAtRules = 'ignore',
+                    },
+                },
+                scss = {
+                    lint = {
+                        unknownAtRules = 'ignore',
+                    },
+                },
+            }
+        })
+
+        lspconfig["eslint"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                codeAction = {
+                    disableRuleComment = {
+                        enable = true,
+                        location = "separateLine"
+                    },
+                    showDocumentation = {
+                        enable = true
+                    }
+                },
+                codeActionOnSave = {
+                    enable = false,
+                    mode = "all"
+                },
+                format = true,
+                nodePath = "",
+                onIgnoredFiles = "off",
+                packageManager = "npm",
+                quiet = false,
+                rulesCustomizations = {},
+                run = "onType",
+                useESLintClass = false,
+                validate = "on",
+                workingDirectory = {
+                    mode = "location"
+                }
+            }
+        })
+
         lspconfig["tailwindcss"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
-            filetypes = { "templ", "astro", "javascript", "typescript", "react", "typescriptreact" },
-            init_options = { userLanguages = { templ = "html" } },
+            filetypes = { "html", "javascript", "typescript", "typescriptreact", "templ", "astro", "vue", "svelte", "mdx" },
+            init_options = {
+                userLanguages = {
+                    templ = "html" ,
+                    eelixir = "html-eex",
+                    eruby = "erb",
+                }
+            },
+            settings = {
+                tailwindCSS = {
+                    lint = {
+                        cssConflict = "warning",
+                        invalidApply = "error",
+                        invalidConfigPath = "error",
+                        invalidScreen = "error",
+                        invalidTailwindDirective = "error",
+                        invalidVariant = "error",
+                        recommendedVariantOrder = "warning",
+                    },
+                    experimental = {
+                        classRegex = {
+                            "tw`([^`]*)",
+                            'tw="([^"]*)',
+                            'tw={"([^"}]*)',
+                            "tw\\.\\w+`([^`]*)",
+                            "tw\\(.*?\\)`([^`]*)",
+                            { "clsx\\(([^)]*)\\)",       "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                            { "classnames\\(([^)]*)\\)", "'([^']*)'" },
+                            { "cva\\(([^)]*)\\)",        "[\"'`]([^\"'`]*).*?[\"'`]" },
+                            { "cn\\(([^)]*)\\)",         "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                        },
+                    },
+                    validate = true,
+                }
+            },
         })
 
         lspconfig["gopls"].setup({

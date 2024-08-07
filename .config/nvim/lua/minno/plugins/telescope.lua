@@ -35,6 +35,8 @@ return {
         keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
         keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd (live grep)" })
         keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+        keymap.set('n', '<leader>o', builtin.oldfiles, { desc = "Search old files" })
+        keymap.set('n', '<leader>b', function() builtin.buffers({ sort_mru=true, ignore_current_buffer=true }) end, { desc = "Search for buffer" })
         keymap.set('n', '<leader>/', function()
             builtin.current_buffer_fuzzy_find(themes.get_dropdown {
                 winblend = 0,
