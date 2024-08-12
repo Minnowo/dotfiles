@@ -51,19 +51,30 @@ return {
 
             -- sources for autocompletion
             sources = cmp.config.sources({
-                { name = "nvim_lsp" },
-                { name = "luasnip" }, -- snippets
-                { name = "buffer" }, -- text within current buffer
-                { name = "path" }, -- file system paths
+                {
+                    name = "nvim_lsp"
+                },
+                {
+                    name = "luasnip"
+                },
+                {
+                    name = "buffer",
+                    option = {
+                        get_bufnrs = function()
+                            local buf = vim.api.nvim_get_current_buf()
+                            local byte_size = vim.api.nvim_buf_get_offset(buf, vim.api.nvim_buf_line_count(buf))
+                            -- don't die on stuff larger than 5mb
+                            if byte_size > 5 * 1024 * 1024 then
+                                return {}
+                            end
+                            return { buf }
+                        end
+                    }
+                },
+                {
+                    name = "path"
+                },
             })
-
-            --  -- configure lspkind for vs-code like pictograms in completion menu
-            --  formatting = {
-            --    format = lspkind.cmp_format({
-            --      maxwidth = 50,
-            --      ellipsis_char = "...",
-            --    }),
-            --  },
         })
     end
 }
