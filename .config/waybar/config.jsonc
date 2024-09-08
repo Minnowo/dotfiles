@@ -1,0 +1,60 @@
+// -*- mode: jsonc -*-
+{
+    "height": 24,
+    "spacing": 4,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "memory",
+        "cpu",
+        "clock",
+        "tray"
+    ],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format"    : "<span color='#F0C674'>{:%Y-%m-%d %H:%M}</span>",
+        "format-alt": "<span color='#F0C674'>{:%A, %d %B %Y at %I:%M %p}</span>"
+    },
+    "cpu": {
+        "format": "<span color='#F0C674'>CPU</span> {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "<span color='#F0C674'>RAM</span> {}%"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format"         : "<span color='#F0C674'>BAT</span> {capacity}%",
+        "format-full"    : "<span color='#F0C674'>BAT</span> {capacity}%",
+        "format-charging": "<span color='#F0C674'>BAT</span> +{capacity}%",
+        "format-good"    : "<span color='#F0C674'>BAT</span> {capacity}%",
+        "format-plugged" : "<span color='#F0C674'>BAT</span> {capacity}%",
+        "format-alt"     : "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format"      : "<span color='#F0C674'>VOL</span> {volume}%",
+        "format-muted": "<span color='#F0C674'>VOL</span> MUTED",
+        "on-click"      : "amixer sset Master toggle",
+        "on-click-right": "pavucontrol"
+    }
+}
