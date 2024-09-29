@@ -208,6 +208,12 @@ return {
             },
         })
 
+        lspconfig["ts_ls"].setup {
+            on_attach = on_attach,
+            filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+            cmd = { "typescript-language-server", "--stdio" }
+        }
+
         lspconfig["gopls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,

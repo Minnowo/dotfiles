@@ -48,6 +48,7 @@ vim.keymap.set('n', '<C-down>', ':horizontal resize +2<CR>', { noremap = true, s
 vim.keymap.set('n', 'H', 'gT')
 vim.keymap.set('n', 'L', 'gt')
 vim.keymap.set('n', '<leader>t', ':tab split<CR>', {noremap=true, silent=true})
+vim.keymap.set('n', '<leader>,', ':Oil<CR>', {noremap=true, silent=true})
 
 -- replace all of current word
 opts.desc = "Replace all of current word"
