@@ -50,6 +50,8 @@ vim.keymap.set('n', 'L', 'gt')
 vim.keymap.set('n', '<leader>t', ':tab split<CR>', {noremap=true, silent=true})
 vim.keymap.set('n', '<leader>,', ':Oil<CR>', {noremap=true, silent=true})
 
+vim.keymap.set('n', '<F3>', ':set list!<CR>', {noremap=true, silent=true})
+
 -- replace all of current word
 opts.desc = "Replace all of current word"
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)

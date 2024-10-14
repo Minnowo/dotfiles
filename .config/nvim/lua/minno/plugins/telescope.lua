@@ -12,6 +12,7 @@ return {
         local themes = require('telescope.themes')
         local builtin = require('telescope.builtin')
 
+
         telescope.setup({
             defaults = {
                 layout_config = {
@@ -22,20 +23,50 @@ return {
                     },
                 },
                 vimgrep_arguments = {
-                    'rg',
-                    '--color=never',
-                    '--no-heading',
-                    '--with-filename',
-                    '--line-number',
-                    '--column',
-                    '--smart-case',
-                    '--hidden',
+                    "rg",
+                    "--follow",        -- Follow symbolic links
+                    "--hidden",        -- Search for hidden files
+                    "--no-heading",    -- Don't group matches by each file
+                    "--with-filename", -- Print the file path with the matched lines
+                    "--line-number",   -- Show line numbers
+                    "--column",        -- Show column numbers
+                    "--smart-case",    -- Smart case search
+
+                    -- Exclude some patterns from search
+                    "--glob=!**/.git/*",
+                    "--glob=!**/.idea/*",
+                    "--glob=!**/.vscode/*",
+                    "--glob=!**/node_modules/*",
+                    "--glob=!**/build/*",
+                    "--glob=!**/dist/*",
+                    "--glob=!**/yarn.lock",
+                    "--glob=!**/package-lock.json",
                 },
                 path_display = { "truncate " },
                 mappings = {
                     i = {
                         ["<C-k>"] = actions.move_selection_previous, -- move to prev result
                         ["<C-j>"] = actions.move_selection_next, -- move to next result
+                    },
+                },
+            },
+            pickers = {
+                find_files = {
+                    hidden = true,
+                    -- needed to exclude some files & dirs from general search
+                    -- when not included or specified in .gitignore
+                    find_command = {
+                        "rg",
+                        "--files",
+                        "--hidden",
+                        "--glob=!**/.git/*",
+                        "--glob=!**/.idea/*",
+                        "--glob=!**/.vscode/*",
+                        "--glob=!**/build/*",
+                        "--glob=!**/dist/*",
+                        "--glob=!**/node_modules/*",
+                        "--glob=!**/yarn.lock",
+                        "--glob=!**/package-lock.json",
                     },
                 },
             },
@@ -53,10 +84,10 @@ return {
         keymap.set('n', '<leader>o', builtin.oldfiles, { desc = "Search old files" })
 
         keymap.set("n", "<leader>ff", function() builtin.find_files({ hidden = true }) end,
-            { desc = "Fuzzy find files in cwd" })
+        { desc = "Fuzzy find files in cwd" })
 
         keymap.set('n', '<leader>b', function() builtin.buffers({ sort_mru = true, ignore_current_buffer = true }) end,
-            { desc = "Search for buffer" })
+        { desc = "Search for buffer" })
 
         keymap.set('n', '<leader>/', function()
             builtin.current_buffer_fuzzy_find(themes.get_dropdown {
