@@ -199,7 +199,7 @@ exec_always --no-startup-id xset r rate 225 32 && notify-send -t 1500 "Key Repea
 exec_always --no-startup-id for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1 && notify-send -t 1500 "Mouse accleration off for pointer: ${id}"; done
 
 # wallpaper
-exec_always --no-startup-id sleep 1 && feh --bg-fill --randomize "$HOME/Pictures/Background/halloween"  
+exec_always --no-startup-id sleep 1 && feh --bg-fill --randomize "$HOME/Pictures/Background/Fall"
 
 
 

@@ -26,6 +26,7 @@ alias la='ls -la'
 alias ll='ls -l'
 alias df='df -h --output=source,target,size,used,avail,pcent'
 alias du='du -h'
+alias mpv-audio='mpv --video=no --force-window=no'
 
 # ALIAS & COMMANDS
 if _cmd_exist 'lsd'; then
@@ -78,6 +79,7 @@ alias unmount-network='sudo umount -t cifs,nfs -a -l'
 alias mount-network='sudo mount -t cifs,nfs -a'
 
 alias find-local='nmap -n -sn 192.168.1.1/24'
+alias find-on='nmap -n -sn '
 
 # https://github.com/alacritty/alacritty/issues/3962#issuecomment-862212371
 # helps ssh for older machines if you cannot install term info
@@ -124,6 +126,27 @@ function ffmpeg-hash()
         fi
 
     done
+}
+
+function download-video() {
+
+    yt-dlp -f "bestvideo+bestaudio[ext=m4a]/best" \
+      --embed-thumbnail --embed-subs --add-metadata \
+      -ciw \
+      -o "%(upload_date)s-%(title)s.%(ext)s" \
+      $*
+}
+
+function download-audio() {
+
+    yt-dlp -f "bestaudio/best" \
+        --extract-audio \
+       --audio-quality 0 \
+       --embed-thumbnail \
+       --embed-thumbnail \
+       -ciw \
+       -o "%(upload_date)s-%(title)s.%(ext)s" \
+       $*
 }
 
 function lfcd () {

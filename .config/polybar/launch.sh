@@ -15,4 +15,4 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 export POLYBAR_COLOR_PRIMARY=#F0C674
 
 # Launch the bar
-polybar -c "$DIR"/config.ini &
+polybar -c "$DIR"/config.ini 2>/dev/null &
