@@ -57,8 +57,8 @@ opts.desc = "Replace all of current word"
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 
 
--- opts.desc = "Run selected lua code"
--- vim.keymap.set("v", "<C-x>", [[<esc>:'<,'>:w !lua<CR>]], opts)
+opts.desc = "Run selected lua code"
+vim.keymap.set("v", "<C-x>", [[<esc>:'<,'>:w !lua<CR>]], opts)
 
 -- run selected lua code and open the output in a new buffer
 -- opts.desc = "Run selected lua code and open output in new buffer"
